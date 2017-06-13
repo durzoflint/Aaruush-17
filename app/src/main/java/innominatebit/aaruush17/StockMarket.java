@@ -3,8 +3,6 @@ package innominatebit.aaruush17;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
@@ -13,12 +11,19 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class LoginActivity extends AppCompatActivity {
-
+public class StockMarket extends AppCompatActivity
+{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_stock_market);
+        Bundle bundle = getIntent().getExtras();
+        String emailID = bundle.getString("emailID");
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+
     }
     class FetchData extends AsyncTask<Void,Void,Void>
     {
@@ -52,7 +57,7 @@ public class LoginActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(Void aVoid)
         {
-            Toast.makeText(LoginActivity.this, webPage, Toast.LENGTH_SHORT).show();
+            //Toast.makeText(SomeActivity.this, webPage, Toast.LENGTH_SHORT).show();
             super.onPostExecute(aVoid);
         }
     }
