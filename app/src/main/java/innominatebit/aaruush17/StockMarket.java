@@ -1,5 +1,6 @@
 package innominatebit.aaruush17;
 
+import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -28,8 +29,15 @@ public class StockMarket extends AppCompatActivity
     }
     class FetchStockData extends AsyncTask<Void,Void,Void>
     {
+        ProgressDialog progressDialog;
         ArrayList<String> values;
         String murl="http://srmvdpauditorium.in/SRMStockMarket/getStockData.php";
+        @Override
+        protected void onPreExecute()
+        {
+            super.onPreExecute();
+            progressDialog = ProgressDialog.show(StockMarket.this, "Please Wait!","Fetching Latest Stock Data");
+        }
         @Override
         protected Void doInBackground(Void... voids)
         {
@@ -65,6 +73,7 @@ public class StockMarket extends AppCompatActivity
         @Override
         protected void onPostExecute(Void aVoid)
         {
+            super.onPostExecute(aVoid);
             int c=0;
             ArrayList<Integer> ids=new ArrayList<>();
             ids.add(R.id.hightech);             ids.add(R.id.eee);              ids.add(R.id.civil);
@@ -79,7 +88,7 @@ public class StockMarket extends AppCompatActivity
                 TextView t=(TextView)findViewById(ids.get(c));
                 t.setText(values.get(c++));
             }
-            super.onPostExecute(aVoid);
+            progressDialog.dismiss();
         }
     }
 }
