@@ -12,7 +12,10 @@ public class SomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_some);
+
+        //TODO Fetch user email id and assign here
         final String emailID="abhinavu1201@gmail.com";
+
         Button button=(Button)findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override

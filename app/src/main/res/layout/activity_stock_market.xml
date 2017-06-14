@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:background="@drawable/border"
         android:orientation="horizontal">
 
         <TextView
@@ -21,7 +22,7 @@
             android:layout_weight="1"
             android:gravity="center_horizontal"
             android:text="Name"
-            android:textSize="18sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/value"
@@ -30,7 +31,16 @@
             android:layout_weight="1"
             android:gravity="center_horizontal"
             android:text="Value per Share "
-            android:textSize="18sp" />
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/myshare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="Shares Owned"
+            android:textSize="20sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -39,6 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:background="@drawable/border"
         android:gravity="bottom|center_horizontal|center"
         android:orientation="horizontal">
 
@@ -49,7 +60,7 @@
             android:layout_weight="1"
             android:gravity="center_horizontal|center"
             android:text="Value Remaning : "
-            android:textSize="18sp" />
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/mydata"
@@ -57,7 +68,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center_horizontal|center"
-            android:text="My Stocks"/>
+            android:text="My Stocks" />
     </LinearLayout>
 
     <ScrollView
@@ -65,8 +76,7 @@
         android:layout_height="match_parent"
         android:layout_above="@+id/down"
         android:layout_below="@+id/top"
-        android:layout_centerHorizontal="true"
-        android:padding="6dp">
+        android:layout_centerHorizontal="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -76,6 +86,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@drawable/border"
                 android:orientation="horizontal"
                 android:padding="4dp">
 
@@ -96,11 +107,21 @@
                     android:gravity="center_horizontal"
                     android:text="Not Available"
                     android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/sharehightech"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="Not Available"
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@drawable/border"
                 android:orientation="horizontal"
                 android:padding="4dp">
 
@@ -121,11 +142,21 @@
                     android:gravity="center_horizontal"
                     android:text="Not Available"
                     android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/shareeee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="Not Available"
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@drawable/border"
                 android:orientation="horizontal"
                 android:padding="4dp">
 
@@ -146,11 +177,21 @@
                     android:gravity="center_horizontal"
                     android:text="Not Available"
                     android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/sharecivil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="Not Available"
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@drawable/border"
                 android:orientation="horizontal"
                 android:padding="4dp">
 
@@ -171,11 +212,21 @@
                     android:gravity="center_horizontal"
                     android:text="Not Available"
                     android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/shareplacement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="Not Available"
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@drawable/border"
                 android:orientation="horizontal"
                 android:padding="4dp">
 
@@ -196,11 +247,21 @@
                     android:gravity="center_horizontal"
                     android:text="Not Available"
                     android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/shareaaruush"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="Not Available"
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@drawable/border"
                 android:orientation="horizontal"
                 android:padding="4dp">
 
@@ -221,11 +282,21 @@
                     android:gravity="center_horizontal"
                     android:text="Not Available"
                     android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/shareaero"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="Not Available"
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@drawable/border"
                 android:orientation="horizontal"
                 android:padding="4dp">
 
@@ -246,11 +317,21 @@
                     android:gravity="center_horizontal"
                     android:text="Not Available"
                     android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/sharebackgate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="Not Available"
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@drawable/border"
                 android:orientation="horizontal"
                 android:padding="4dp">
 
@@ -271,11 +352,21 @@
                     android:gravity="center_horizontal"
                     android:text="Not Available"
                     android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/shareub"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="Not Available"
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@drawable/border"
                 android:orientation="horizontal"
                 android:padding="4dp">
 
@@ -296,11 +387,21 @@
                     android:gravity="center_horizontal"
                     android:text="Not Available"
                     android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/sharetechpark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="Not Available"
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@drawable/border"
                 android:orientation="horizontal"
                 android:padding="4dp">
 
@@ -321,11 +422,21 @@
                     android:gravity="center_horizontal"
                     android:text="Not Available"
                     android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/sharearchblock"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="Not Available"
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@drawable/border"
                 android:orientation="horizontal"
                 android:padding="4dp">
 
@@ -346,11 +457,21 @@
                     android:gravity="center_horizontal"
                     android:text="Not Available"
                     android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/sharebioblock"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="Not Available"
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@drawable/border"
                 android:orientation="horizontal"
                 android:padding="4dp">
 
@@ -371,11 +492,21 @@
                     android:gravity="center_horizontal"
                     android:text="Not Available"
                     android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/sharemba"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="Not Available"
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@drawable/border"
                 android:orientation="horizontal"
                 android:padding="4dp">
 
@@ -396,11 +527,21 @@
                     android:gravity="center_horizontal"
                     android:text="Not Available"
                     android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/shareghostel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="Not Available"
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@drawable/border"
                 android:orientation="horizontal"
                 android:padding="4dp">
 
@@ -421,11 +562,21 @@
                     android:gravity="center_horizontal"
                     android:text="Not Available"
                     android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/sharebhostel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="Not Available"
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@drawable/border"
                 android:orientation="horizontal"
                 android:padding="4dp">
 
@@ -446,11 +597,21 @@
                     android:gravity="center_horizontal"
                     android:text="Not Available"
                     android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/shareaudi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="Not Available"
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@drawable/border"
                 android:orientation="horizontal"
                 android:padding="4dp">
 
@@ -471,11 +632,21 @@
                     android:gravity="center_horizontal"
                     android:text="Not Available"
                     android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/sharejava"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="Not Available"
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@drawable/border"
                 android:orientation="horizontal"
                 android:padding="4dp">
 
@@ -496,11 +667,21 @@
                     android:gravity="center_horizontal"
                     android:text="Not Available"
                     android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/sharehospital"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="Not Available"
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@drawable/border"
                 android:orientation="horizontal"
                 android:padding="4dp">
 
@@ -521,11 +702,21 @@
                     android:gravity="center_horizontal"
                     android:text="Not Available"
                     android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/sharevpt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="Not Available"
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@drawable/border"
                 android:orientation="horizontal"
                 android:padding="4dp">
 
@@ -546,11 +737,21 @@
                     android:gravity="center_horizontal"
                     android:text="Not Available"
                     android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/sharedental"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="Not Available"
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@drawable/border"
                 android:orientation="horizontal"
                 android:padding="4dp">
 
@@ -565,6 +766,15 @@
 
                 <TextView
                     android:id="@+id/pfhostel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="Not Available"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/sharepfhostel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
