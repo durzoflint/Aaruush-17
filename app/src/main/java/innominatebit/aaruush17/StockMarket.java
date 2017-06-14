@@ -13,6 +13,8 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class StockMarket extends AppCompatActivity
 {
@@ -32,7 +34,8 @@ public class StockMarket extends AppCompatActivity
     }
     class MyData extends AsyncTask<Void,Void,Void>
     {
-        String webPage="";
+        String cashRemaining;
+        HashMap<String,String> userShares;
         ProgressDialog progressDialog;
         @Override
         protected void onPreExecute()
@@ -51,18 +54,21 @@ public class StockMarket extends AppCompatActivity
                 urlConnection = (HttpURLConnection) url.openConnection();
                 InputStreamReader isw = new InputStreamReader(urlConnection.getInputStream());
                 BufferedReader br=new BufferedReader(isw);
-                String data="";
+                String data="",webPage="";
                 while ((data=br.readLine()) != null)
                     webPage=webPage+data;
-
-                //TODO format user stock data
-
-                /*values=new ArrayList<>();
+                userShares=new HashMap<>();
                 while(webPage.indexOf('<')!=-1)
                 {
+                    String key=webPage.substring(0,webPage.indexOf('<'));
                     webPage=webPage.substring(webPage.indexOf('<')+1);
-                    values.add(webPage.substring(0,webPage.indexOf('>')));
-                }*/
+                    String value=webPage.substring(0,webPage.indexOf('>'));
+                    webPage=webPage.substring(webPage.indexOf('>')+1);
+                    if(key.equals("Cost"))
+                        cashRemaining=value;
+                    else
+                        userShares.put(key,value);
+                }
             }
             catch (IOException e)
             {
@@ -80,11 +86,27 @@ public class StockMarket extends AppCompatActivity
         {
             super.onPostExecute(aVoid);
             progressDialog.dismiss();
-
-            //TODO store in a hashmap<key="Name of building" , value="ids of textview that needs to be updated">
-            //TODO Update the textviews with the User's Shares
-
-            Toast.makeText(StockMarket.this, webPage, Toast.LENGTH_SHORT).show();
+            HashMap<String,Integer> textviews=new HashMap<>();
+            textviews.put("High Tech",R.id.sharehightech);            textviews.put("EEE",R.id.shareeee);
+            textviews.put("Civil",R.id.sharecivil);            textviews.put("Placement",R.id.shareplacement);
+            textviews.put("Aaruush",R.id.shareaaruush);            textviews.put("Aero",R.id.shareaero);
+            textviews.put("Back Gate",R.id.sharebackgate);            textviews.put("UB",R.id.shareub);
+            textviews.put("Tech Park",R.id.sharetechpark);            textviews.put("Arch Block",R.id.sharearchblock);
+            textviews.put("Bio Block",R.id.sharebioblock);            textviews.put("MBA",R.id.sharemba);
+            textviews.put("G Hostel",R.id.shareghostel);            textviews.put("B Hostel",R.id.sharebhostel);
+            textviews.put("Audi",R.id.shareaudi);            textviews.put("Java",R.id.shareghostel);
+            textviews.put("Hospital",R.id.sharehospital);            textviews.put("VPT",R.id.sharevpt);
+            textviews.put("Dental",R.id.sharedental);            textviews.put("PF Hostel",R.id.sharepfhostel);
+            for(Map.Entry<String,String> e:userShares.entrySet())
+            {
+                String key = e.getKey();
+                String value = e.getValue();
+                int id=textviews.get(key);
+                TextView tv=(TextView)findViewById(id);
+                tv.setText(value);
+            }
+            TextView valueRemaning=(TextView)findViewById(R.id.valueremaning);
+            valueRemaning.setText(valueRemaning.getText()+cashRemaining);
         }
 
     }

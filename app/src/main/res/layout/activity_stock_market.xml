@@ -114,7 +114,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
-                    android:text="Not Available"
+                    android:text="0"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -149,7 +149,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
-                    android:text="Not Available"
+                    android:text="0"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -184,7 +184,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
-                    android:text="Not Available"
+                    android:text="0"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -219,7 +219,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
-                    android:text="Not Available"
+                    android:text="0"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -254,7 +254,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
-                    android:text="Not Available"
+                    android:text="0"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -289,7 +289,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
-                    android:text="Not Available"
+                    android:text="0"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -324,7 +324,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
-                    android:text="Not Available"
+                    android:text="0"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -359,7 +359,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
-                    android:text="Not Available"
+                    android:text="0"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -394,7 +394,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
-                    android:text="Not Available"
+                    android:text="0"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -429,7 +429,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
-                    android:text="Not Available"
+                    android:text="0"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -464,7 +464,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
-                    android:text="Not Available"
+                    android:text="0"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -499,7 +499,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
-                    android:text="Not Available"
+                    android:text="0"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -534,7 +534,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
-                    android:text="Not Available"
+                    android:text="0"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -569,7 +569,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
-                    android:text="Not Available"
+                    android:text="0"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -604,7 +604,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
-                    android:text="Not Available"
+                    android:text="0"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -639,7 +639,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
-                    android:text="Not Available"
+                    android:text="0"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -674,7 +674,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
-                    android:text="Not Available"
+                    android:text="0"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -709,7 +709,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
-                    android:text="Not Available"
+                    android:text="0"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -744,7 +744,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
-                    android:text="Not Available"
+                    android:text="0"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -779,7 +779,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
-                    android:text="Not Available"
+                    android:text="0"
                     android:textSize="16sp" />
             </LinearLayout>
         </LinearLayout>
