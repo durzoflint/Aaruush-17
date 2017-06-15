@@ -25,10 +25,6 @@ import java.util.Map;
 
 public class StockMarket extends AppCompatActivity
 {
-
-    //TODO Remove ids of individual linear layouts inside 'Data' if
-        //TODO they have not been used anywhere after StockMarket Application is completed
-
     String emailID;
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -182,7 +178,7 @@ public class StockMarket extends AppCompatActivity
                     webPage=webPage.substring(webPage.indexOf('<')+1);
                     String value=webPage.substring(0,webPage.indexOf('>'));
                     webPage=webPage.substring(webPage.indexOf('>')+1);
-                    if(key.equals("Cost"))
+                    if(key.equals("Cash"))
                         cashRemaining=cashRemaining+value;
                     else
                         userShares.put(key,value);

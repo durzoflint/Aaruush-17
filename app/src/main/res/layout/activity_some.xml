@@ -7,10 +7,63 @@
     tools:context="innominatebit.aaruush17.SomeActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/loginmail"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:text="Register" />
+
+    <EditText
+        android:id="@+id/enteredemailid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/register"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dp"
+        android:ems="15"
+        android:gravity="center_horizontal"
+        android:hint="Please enter your Email ID"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="Enter name"
+        android:inputType="textPersonName"
+        android:layout_above="@+id/enteredemailid"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="21dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_above="@+id/loginmail"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/darker_gray" />
+
+    <EditText
+        android:id="@+id/loginmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:text="Button" />
+        android:layout_centerHorizontal="true"
+        android:ems="15"
+        android:gravity="center_horizontal"
+        android:hint="Enter Emaill ID"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/register"
+        android:layout_below="@+id/loginmail"
+        android:layout_marginTop="25dp"
+        android:text="Login" />
+
 </RelativeLayout>

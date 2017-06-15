@@ -73,7 +73,6 @@
             android:orientation="vertical">
 
             <LinearLayout
-                android:id="@+id/viewhightech"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
@@ -110,7 +109,6 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/vieweee"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
@@ -147,7 +145,6 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/viewcivil"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
@@ -184,7 +181,6 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/viewplacement"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
@@ -221,7 +217,6 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/viewaaruush"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
@@ -258,7 +253,6 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/viewaero"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
@@ -295,7 +289,6 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/viewbackgate"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
@@ -332,7 +325,6 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/viewub"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
@@ -369,7 +361,6 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/viewtechpark"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
@@ -406,7 +397,6 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/viewarchblock"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
@@ -443,7 +433,6 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/viewbioblock"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
@@ -480,7 +469,6 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/viewmba"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
@@ -517,7 +505,6 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/viewghostel"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
@@ -554,7 +541,6 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/viewbhostel"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
@@ -591,7 +577,6 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/viewaudi"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
@@ -628,7 +613,6 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/viewjava"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
@@ -665,7 +649,6 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/viewhospital"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
@@ -702,7 +685,6 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/viewvpt"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
@@ -739,7 +721,6 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/viewdental"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
@@ -776,7 +757,6 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/viewpfhostel"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
