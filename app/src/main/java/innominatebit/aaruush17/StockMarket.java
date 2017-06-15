@@ -4,6 +4,8 @@ import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,6 +20,10 @@ import java.util.Map;
 
 public class StockMarket extends AppCompatActivity
 {
+
+    //TODO Remove ids of individual linear layouts inside 'Data' if
+        //TODO they have not been used anywhere after StockMarket Application is completed
+
     String emailID;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,17 +37,42 @@ public class StockMarket extends AppCompatActivity
         super.onStart();
         new FetchStockData().execute();
         new MyData().execute();
+        setOnClickListeners();
+    }
+    void setOnClickListeners()
+    {
+        LinearLayout data=(LinearLayout)findViewById(R.id.data);
+        for(int i=0;i<data.getChildCount();i++)
+        {
+            final LinearLayout child=(LinearLayout) data.getChildAt(i);
+            child.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view)
+                {
+                    TextView viewname=(TextView) child.getChildAt(0);
+                    String name=viewname.getText().toString();
+                    TextView viewValuePerShare=(TextView) child.getChildAt(1);
+                    String valuePerShare=viewValuePerShare.getText().toString();
+                    TextView viewSharesOwned=(TextView) child.getChildAt(2);
+                    String sharedOwned=viewSharesOwned.getText().toString();
+
+                    //TODO create a dialog box which allows the user to buy new or sell his shares
+
+                }
+            });
+        }
     }
     class MyData extends AsyncTask<Void,Void,Void>
     {
-        String cashRemaining;
+        String cashRemaining="Cash Remaining : ";
         HashMap<String,String> userShares;
         ProgressDialog progressDialog;
         @Override
         protected void onPreExecute()
         {
-            super.onPreExecute();
             progressDialog = ProgressDialog.show(StockMarket.this, "Please Wait!","Fetching Your Stock Details");
+            super.onPreExecute();
+            userShares=new HashMap<>();
         }
         @Override
         protected Void doInBackground(Void... voids)
@@ -52,12 +83,10 @@ public class StockMarket extends AppCompatActivity
             {
                 url = new URL("http://srmvdpauditorium.in/SRMStockMarket/getUserData.php?emailID="+emailID);
                 urlConnection = (HttpURLConnection) url.openConnection();
-                InputStreamReader isw = new InputStreamReader(urlConnection.getInputStream());
-                BufferedReader br=new BufferedReader(isw);
+                BufferedReader br=new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
                 String data="",webPage="";
                 while ((data=br.readLine()) != null)
                     webPage=webPage+data;
-                userShares=new HashMap<>();
                 while(webPage.indexOf('<')!=-1)
                 {
                     String key=webPage.substring(0,webPage.indexOf('<'));
@@ -65,7 +94,7 @@ public class StockMarket extends AppCompatActivity
                     String value=webPage.substring(0,webPage.indexOf('>'));
                     webPage=webPage.substring(webPage.indexOf('>')+1);
                     if(key.equals("Cost"))
-                        cashRemaining=value;
+                        cashRemaining=cashRemaining+value;
                     else
                         userShares.put(key,value);
                 }
@@ -106,7 +135,7 @@ public class StockMarket extends AppCompatActivity
                 tv.setText(value);
             }
             TextView valueRemaning=(TextView)findViewById(R.id.valueremaning);
-            valueRemaning.setText(valueRemaning.getText()+cashRemaining);
+            valueRemaning.setText(cashRemaining);
         }
 
     }
@@ -117,8 +146,9 @@ public class StockMarket extends AppCompatActivity
         @Override
         protected void onPreExecute()
         {
-            super.onPreExecute();
             progressDialog = ProgressDialog.show(StockMarket.this, "Please Wait!","Fetching Latest Stock Data");
+            super.onPreExecute();
+            values=new ArrayList<>();
         }
         @Override
         protected Void doInBackground(Void... voids)
@@ -134,7 +164,6 @@ public class StockMarket extends AppCompatActivity
                 String data="",webPage="";
                 while ((data=br.readLine()) != null)
                     webPage=webPage+data;
-                values=new ArrayList<>();
                 while(webPage.indexOf('<')!=-1)
                 {
                     webPage=webPage.substring(webPage.indexOf('<')+1);
@@ -171,6 +200,7 @@ public class StockMarket extends AppCompatActivity
                 t.setText(values.get(c++));
             }
             progressDialog.dismiss();
+            Toast.makeText(StockMarket.this, "Tap on any Stock for a Detailed View", Toast.LENGTH_SHORT).show();
         }
     }
 }

@@ -13,7 +13,9 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:background="@drawable/border"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp">
 
         <TextView
             android:id="@+id/Place"
@@ -43,52 +45,41 @@
             android:textSize="20sp" />
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/down"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/valueremaning"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/border"
-        android:gravity="bottom|center_horizontal|center"
-        android:orientation="horizontal">
+        android:layout_marginTop="4dp"
+        android:gravity="center_horizontal|center"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp"
+        android:text="Value Remaning : "
+        android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/valueremaning"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_horizontal|center"
-            android:text="Value Remaning : "
-            android:textSize="20sp" />
-
-        <Button
-            android:id="@+id/mydata"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_horizontal|center"
-            android:text="My Stocks" />
-    </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/down"
+        android:layout_above="@+id/valueremaning"
         android:layout_below="@+id/top"
         android:layout_centerHorizontal="true">
 
         <LinearLayout
+            android:id="@+id/data"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <LinearLayout
+                android:id="@+id/viewhightech"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
                 android:orientation="horizontal"
-                android:padding="4dp">
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp">
 
                 <TextView
                     android:id="@+id/textView6"
@@ -119,11 +110,13 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/vieweee"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
                 android:orientation="horizontal"
-                android:padding="4dp">
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp">
 
                 <TextView
                     android:id="@+id/textView7"
@@ -154,11 +147,13 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/viewcivil"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
                 android:orientation="horizontal"
-                android:padding="4dp">
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp">
 
                 <TextView
                     android:id="@+id/textView9"
@@ -189,11 +184,13 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/viewplacement"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
                 android:orientation="horizontal"
-                android:padding="4dp">
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp">
 
                 <TextView
                     android:id="@+id/textView11"
@@ -224,11 +221,13 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/viewaaruush"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
                 android:orientation="horizontal"
-                android:padding="4dp">
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp">
 
                 <TextView
                     android:id="@+id/textView13"
@@ -259,11 +258,13 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/viewaero"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
                 android:orientation="horizontal"
-                android:padding="4dp">
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp">
 
                 <TextView
                     android:id="@+id/textView15"
@@ -294,11 +295,13 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/viewbackgate"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
                 android:orientation="horizontal"
-                android:padding="4dp">
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp">
 
                 <TextView
                     android:id="@+id/textView17"
@@ -329,11 +332,13 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/viewub"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
                 android:orientation="horizontal"
-                android:padding="4dp">
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp">
 
                 <TextView
                     android:id="@+id/textView19"
@@ -364,11 +369,13 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/viewtechpark"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
                 android:orientation="horizontal"
-                android:padding="4dp">
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp">
 
                 <TextView
                     android:id="@+id/textView21"
@@ -399,11 +406,13 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/viewarchblock"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
                 android:orientation="horizontal"
-                android:padding="4dp">
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp">
 
                 <TextView
                     android:id="@+id/textView23"
@@ -434,11 +443,13 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/viewbioblock"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
                 android:orientation="horizontal"
-                android:padding="4dp">
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp">
 
                 <TextView
                     android:id="@+id/textView25"
@@ -469,11 +480,13 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/viewmba"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
                 android:orientation="horizontal"
-                android:padding="4dp">
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp">
 
                 <TextView
                     android:id="@+id/textView27"
@@ -504,11 +517,13 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/viewghostel"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
                 android:orientation="horizontal"
-                android:padding="4dp">
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp">
 
                 <TextView
                     android:id="@+id/textView29"
@@ -539,11 +554,13 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/viewbhostel"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
                 android:orientation="horizontal"
-                android:padding="4dp">
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp">
 
                 <TextView
                     android:id="@+id/textView31"
@@ -574,11 +591,13 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/viewaudi"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
                 android:orientation="horizontal"
-                android:padding="4dp">
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp">
 
                 <TextView
                     android:id="@+id/textView33"
@@ -609,11 +628,13 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/viewjava"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
                 android:orientation="horizontal"
-                android:padding="4dp">
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp">
 
                 <TextView
                     android:id="@+id/textView35"
@@ -644,11 +665,13 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/viewhospital"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
                 android:orientation="horizontal"
-                android:padding="4dp">
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp">
 
                 <TextView
                     android:id="@+id/textView37"
@@ -679,11 +702,13 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/viewvpt"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
                 android:orientation="horizontal"
-                android:padding="4dp">
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp">
 
                 <TextView
                     android:id="@+id/textView39"
@@ -714,11 +739,13 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/viewdental"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
                 android:orientation="horizontal"
-                android:padding="4dp">
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp">
 
                 <TextView
                     android:id="@+id/textView41"
@@ -749,11 +776,13 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/viewpfhostel"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
                 android:orientation="horizontal"
-                android:padding="4dp">
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp">
 
                 <TextView
                     android:id="@+id/textView43"
