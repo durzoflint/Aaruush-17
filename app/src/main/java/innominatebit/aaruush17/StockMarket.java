@@ -31,21 +31,20 @@ public class StockMarket extends AppCompatActivity
 
     String emailID;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stock_market);
         Bundle bundle = getIntent().getExtras();
         emailID = bundle.getString("emailID");
     }
     @Override
-    protected void onStart() {
+    protected void onStart(){
         super.onStart();
         new FetchStockData().execute();
         new MyData().execute("http://srmvdpauditorium.in/SRMStockMarket/getUserData.php?emailID="+emailID);
-        setOnClickListeners();
+        doInteraction();
     }
-    void setOnClickListeners()
-    {
+    void doInteraction(){
         LinearLayout data=(LinearLayout)findViewById(R.id.data);
         for(int i=0;i<data.getChildCount();i++)
         {
@@ -58,9 +57,10 @@ public class StockMarket extends AppCompatActivity
                     final String name=viewname.getText().toString();
                     TextView viewValuePerShare=(TextView) child.getChildAt(1);
                     final String valuePerShare=viewValuePerShare.getText().toString();
+                    final Double value=Double.parseDouble(valuePerShare);
                     TextView viewSharesOwned=(TextView) child.getChildAt(2);
                     final String sharesOwned=viewSharesOwned.getText().toString();
-                    Double myShares=Double.parseDouble(sharesOwned);
+                    final Double myShares=Double.parseDouble(sharesOwned);
                     String buyMore="Buy More";
                     if(myShares==0.0)
                         buyMore="Buy";
@@ -91,29 +91,23 @@ public class StockMarket extends AppCompatActivity
                                                             if(input.length()>0)
                                                             {
                                                                 double quantity=Double.parseDouble(input);
-
-                                                                // todo run a script to sell stocks under the 'name'
-                                                                //check for valid quantity before passing. Dont pass more stocks than what user has
-
-                                                                Toast.makeText(StockMarket.this, "Quantity : "+quantity, Toast.LENGTH_SHORT).show();
-
+                                                                if(quantity<=myShares)
+                                                                    new MyData().execute("http://srmvdpauditorium.in/SRMStockMarket/sellStocks.php?emailID="+emailID+"&stockName="+name+"&quantity="+quantity);
+                                                                else
+                                                                    Toast.makeText(StockMarket.this, "Entered number of shares cannot be more than the shares you own!", Toast.LENGTH_LONG).show();
                                                             }
                                                         }
                                                     })
                                                     .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener(){
                                                         public void onClick(DialogInterface dialog, int which){}})
                                                     .create().show();
-                                            dialog.cancel();
                                         }
                                     })
                                     .setNeutralButton("Sell All", new DialogInterface.OnClickListener()
                                     {
                                         public void onClick(DialogInterface dialog, int which)
                                         {
-
-                                            //TODO Run a script which removes all asset of the user under the 'name'
-
-                                            dialog.cancel();
+                                            new MyData().execute("http://srmvdpauditorium.in/SRMStockMarket/sellStocks.php?emailID="+emailID+"&stockName="+name+"&quantity="+myShares);
                                         }
                                     });
                         case "0.0" :
@@ -138,14 +132,18 @@ public class StockMarket extends AppCompatActivity
                                                     if(input.length()>0)
                                                     {
                                                         double quantity=Double.parseDouble(input);
-                                                        new MyData().execute("http://srmvdpauditorium.in/SRMStockMarket/buyStocks.php?emailID="+emailID+"&stockName="+name+"&quantity="+quantity);
+                                                        TextView valueRemaning=(TextView)findViewById(R.id.valueremaning);
+                                                        Double userCash=Double.parseDouble(valueRemaning.getText().toString().substring(17));
+                                                        if(userCash>=quantity*value)
+                                                            new MyData().execute("http://srmvdpauditorium.in/SRMStockMarket/buyStocks.php?emailID="+emailID+"&stockName="+name+"&quantity="+quantity);
+                                                        else
+                                                            Toast.makeText(StockMarket.this, "You do not have enough Cash to buy "+quantity+" stocks of "+name+"!", Toast.LENGTH_LONG).show();
                                                     }
                                                 }
                                             })
                                             .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener(){
                                                 public void onClick(DialogInterface dialog, int which){}})
                                             .create().show();
-                                    dialog.cancel();
                                 }
                             });
                     }
@@ -154,8 +152,7 @@ public class StockMarket extends AppCompatActivity
             });
         }
     }
-    class MyData extends AsyncTask<String,Void,Void>
-    {
+    class MyData extends AsyncTask<String,Void,Void>{
         String cashRemaining="Cash Remaining : ";
         HashMap<String,String> userShares;
         ProgressDialog progressDialog;
@@ -231,8 +228,7 @@ public class StockMarket extends AppCompatActivity
         }
 
     }
-    class FetchStockData extends AsyncTask<Void,Void,Void>
-    {
+    class FetchStockData extends AsyncTask<Void,Void,Void>{
         ProgressDialog progressDialog;
         ArrayList<String> values;
         @Override
