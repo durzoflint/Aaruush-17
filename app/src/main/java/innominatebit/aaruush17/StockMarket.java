@@ -41,7 +41,7 @@ public class StockMarket extends AppCompatActivity
     protected void onStart() {
         super.onStart();
         new FetchStockData().execute();
-        new MyData().execute();
+        new MyData().execute("http://srmvdpauditorium.in/SRMStockMarket/getUserData.php?emailID="+emailID);
         setOnClickListeners();
     }
     void setOnClickListeners()
@@ -93,6 +93,7 @@ public class StockMarket extends AppCompatActivity
                                                                 double quantity=Double.parseDouble(input);
 
                                                                 // todo run a script to sell stocks under the 'name'
+                                                                //check for valid quantity before passing. Dont pass more stocks than what user has
 
                                                                 Toast.makeText(StockMarket.this, "Quantity : "+quantity, Toast.LENGTH_SHORT).show();
 
@@ -137,11 +138,7 @@ public class StockMarket extends AppCompatActivity
                                                     if(input.length()>0)
                                                     {
                                                         double quantity=Double.parseDouble(input);
-
-                                                        // todo run a script to buy more stocks under the 'name'
-
-                                                        Toast.makeText(StockMarket.this, "Quantity : "+quantity, Toast.LENGTH_SHORT).show();
-
+                                                        new MyData().execute("http://srmvdpauditorium.in/SRMStockMarket/buyStocks.php?emailID="+emailID+"&stockName="+name+"&quantity="+quantity);
                                                     }
                                                 }
                                             })
@@ -157,7 +154,7 @@ public class StockMarket extends AppCompatActivity
             });
         }
     }
-    class MyData extends AsyncTask<Void,Void,Void>
+    class MyData extends AsyncTask<String,Void,Void>
     {
         String cashRemaining="Cash Remaining : ";
         HashMap<String,String> userShares;
@@ -170,13 +167,13 @@ public class StockMarket extends AppCompatActivity
             userShares=new HashMap<>();
         }
         @Override
-        protected Void doInBackground(Void... voids)
+        protected Void doInBackground(String... strings)
         {
             URL url;
             HttpURLConnection urlConnection = null;
             try
             {
-                url = new URL("http://srmvdpauditorium.in/SRMStockMarket/getUserData.php?emailID="+emailID);
+                url = new URL(strings[0]);
                 urlConnection = (HttpURLConnection) url.openConnection();
                 BufferedReader br=new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
                 String data="",webPage="";
