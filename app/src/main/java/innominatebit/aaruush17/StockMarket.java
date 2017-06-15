@@ -1,10 +1,15 @@
 package innominatebit.aaruush17;
 
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.os.AsyncTask;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -50,14 +55,104 @@ public class StockMarket extends AppCompatActivity
                 public void onClick(View view)
                 {
                     TextView viewname=(TextView) child.getChildAt(0);
-                    String name=viewname.getText().toString();
+                    final String name=viewname.getText().toString();
                     TextView viewValuePerShare=(TextView) child.getChildAt(1);
-                    String valuePerShare=viewValuePerShare.getText().toString();
+                    final String valuePerShare=viewValuePerShare.getText().toString();
                     TextView viewSharesOwned=(TextView) child.getChildAt(2);
-                    String sharedOwned=viewSharesOwned.getText().toString();
+                    final String sharesOwned=viewSharesOwned.getText().toString();
+                    Double myShares=Double.parseDouble(sharesOwned);
+                    String buyMore="Buy More";
+                    if(myShares==0.0)
+                        buyMore="Buy";
+                    AlertDialog.Builder stockDialog = new AlertDialog.Builder(StockMarket.this)
+                            .setMessage("\nValue per Share : "+valuePerShare+"\nShares Owned by You: "+sharesOwned)
+                            .setIcon(android.R.drawable.ic_menu_agenda).setTitle(name);
+                    switch (myShares+"")
+                    {
+                        default:
+                            stockDialog.setNegativeButton("Sell", new DialogInterface.OnClickListener()
+                                    {
+                                        public void onClick(DialogInterface dialog, int which)
+                                        {
+                                            LayoutInflater inflater = LayoutInflater.from(StockMarket.this);
+                                            final View stockDetails= inflater.inflate(R.layout.stock_details, null);
+                                            new AlertDialog.Builder(StockMarket.this).setTitle("Sell Stocks for "+name)
+                                                    .setView(stockDetails)
+                                                    .setMessage("\nValue per Share : "+valuePerShare
+                                                            +"\nShares Owned by You: "+sharesOwned
+                                                            +"\n\nEnter the quantity of stocks you wish to sell.")
+                                                    .setIcon(android.R.drawable.ic_menu_agenda)
+                                                    .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener()
+                                                    {
+                                                        public void onClick(DialogInterface dialog, int which)
+                                                        {
+                                                            EditText stockQuantity=(EditText)stockDetails.findViewById(R.id.stockquantity);
+                                                            String input=stockQuantity.getText().toString();
+                                                            if(input.length()>0)
+                                                            {
+                                                                double quantity=Double.parseDouble(input);
 
-                    //TODO create a dialog box which allows the user to buy new or sell his shares
+                                                                // todo run a script to sell stocks under the 'name'
 
+                                                                Toast.makeText(StockMarket.this, "Quantity : "+quantity, Toast.LENGTH_SHORT).show();
+
+                                                            }
+                                                        }
+                                                    })
+                                                    .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener(){
+                                                        public void onClick(DialogInterface dialog, int which){}})
+                                                    .create().show();
+                                            dialog.cancel();
+                                        }
+                                    })
+                                    .setNeutralButton("Sell All", new DialogInterface.OnClickListener()
+                                    {
+                                        public void onClick(DialogInterface dialog, int which)
+                                        {
+
+                                            //TODO Run a script which removes all asset of the user under the 'name'
+
+                                            dialog.cancel();
+                                        }
+                                    });
+                        case "0.0" :
+                            stockDialog.setPositiveButton(buyMore, new DialogInterface.OnClickListener()
+                            {
+                                public void onClick(DialogInterface dialog, int which)
+                                {
+                                    LayoutInflater inflater = LayoutInflater.from(StockMarket.this);
+                                    final View stockDetails= inflater.inflate(R.layout.stock_details, null);
+                                    new AlertDialog.Builder(StockMarket.this).setTitle("Buy Stocks for "+name)
+                                            .setView(stockDetails)
+                                            .setMessage("\nValue per Share : "+valuePerShare
+                                                    +"\nShares Owned by You: "+sharesOwned
+                                                    +"\n\nEnter the quantity of stocks you wish to buy.")
+                                            .setIcon(android.R.drawable.ic_menu_agenda)
+                                            .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener()
+                                            {
+                                                public void onClick(DialogInterface dialog, int which)
+                                                {
+                                                    EditText stockQuantity=(EditText)stockDetails.findViewById(R.id.stockquantity);
+                                                    String input=stockQuantity.getText().toString();
+                                                    if(input.length()>0)
+                                                    {
+                                                        double quantity=Double.parseDouble(input);
+
+                                                        // todo run a script to buy more stocks under the 'name'
+
+                                                        Toast.makeText(StockMarket.this, "Quantity : "+quantity, Toast.LENGTH_SHORT).show();
+
+                                                    }
+                                                }
+                                            })
+                                            .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener(){
+                                                public void onClick(DialogInterface dialog, int which){}})
+                                            .create().show();
+                                    dialog.cancel();
+                                }
+                            });
+                    }
+                    stockDialog.create().show();
                 }
             });
         }
@@ -200,7 +295,7 @@ public class StockMarket extends AppCompatActivity
                 t.setText(values.get(c++));
             }
             progressDialog.dismiss();
-            Toast.makeText(StockMarket.this, "Tap on any Stock for a Detailed View", Toast.LENGTH_SHORT).show();
+            Toast.makeText(StockMarket.this, "Tap on a Stock to Interact", Toast.LENGTH_SHORT).show();
         }
     }
 }
