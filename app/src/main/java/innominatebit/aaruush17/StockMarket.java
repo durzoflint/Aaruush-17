@@ -88,7 +88,7 @@ public class StockMarket extends AppCompatActivity
                                                             {
                                                                 double quantity=Double.parseDouble(input);
                                                                 if(quantity<=myShares)
-                                                                    new MyData().execute("http://srmvdpauditorium.in/SRMStockMarket/sellStocks.php?emailID="+emailID+"&stockName="+name+"&quantity="+quantity);
+                                                                    new MyData().execute("http://srmvdpauditorium.in/SRMStockMarket/sellStocks.php?emailID="+emailID+"&stockName="+handleSpaces(name)+"&quantity="+quantity);
                                                                 else
                                                                     Toast.makeText(StockMarket.this, "Entered number of shares cannot be more than the shares you own!", Toast.LENGTH_LONG).show();
                                                             }
@@ -103,7 +103,7 @@ public class StockMarket extends AppCompatActivity
                                     {
                                         public void onClick(DialogInterface dialog, int which)
                                         {
-                                            new MyData().execute("http://srmvdpauditorium.in/SRMStockMarket/sellStocks.php?emailID="+emailID+"&stockName="+name+"&quantity="+myShares);
+                                            new MyData().execute("http://srmvdpauditorium.in/SRMStockMarket/sellStocks.php?emailID="+emailID+"&stockName="+handleSpaces(name)+"&quantity="+myShares);
                                         }
                                     });
                         case "0.0" :
@@ -131,7 +131,7 @@ public class StockMarket extends AppCompatActivity
                                                         TextView valueRemaning=(TextView)findViewById(R.id.valueremaning);
                                                         Double userCash=Double.parseDouble(valueRemaning.getText().toString().substring(17));
                                                         if(userCash>=quantity*value)
-                                                            new MyData().execute("http://srmvdpauditorium.in/SRMStockMarket/buyStocks.php?emailID="+emailID+"&stockName="+name+"&quantity="+quantity);
+                                                            new MyData().execute("http://srmvdpauditorium.in/SRMStockMarket/buyStocks.php?emailID=" + emailID + "&stockName=" + handleSpaces(name)+ "&quantity=" + quantity);
                                                         else
                                                             Toast.makeText(StockMarket.this, "You do not have enough Cash to buy "+quantity+" stocks of "+name+"!", Toast.LENGTH_LONG).show();
                                                     }
@@ -153,15 +153,13 @@ public class StockMarket extends AppCompatActivity
         HashMap<String,String> userShares;
         ProgressDialog progressDialog;
         @Override
-        protected void onPreExecute()
-        {
+        protected void onPreExecute(){
             progressDialog = ProgressDialog.show(StockMarket.this, "Please Wait!","Fetching Your Stock Details");
             super.onPreExecute();
             userShares=new HashMap<>();
         }
         @Override
-        protected Void doInBackground(String... strings)
-        {
+        protected Void doInBackground(String... strings){
             URL url;
             HttpURLConnection urlConnection = null;
             try
@@ -186,6 +184,7 @@ public class StockMarket extends AppCompatActivity
             }
             catch (IOException e)
             {
+                Toast.makeText(StockMarket.this, "Oops! Some Error Occurred!", Toast.LENGTH_SHORT).show();
                 e.printStackTrace();
             }
             finally
@@ -196,8 +195,7 @@ public class StockMarket extends AppCompatActivity
             return null;
         }
         @Override
-        protected void onPostExecute(Void aVoid)
-        {
+        protected void onPostExecute(Void aVoid){
             super.onPostExecute(aVoid);
             progressDialog.dismiss();
             HashMap<String,Integer> textviews=new HashMap<>();
@@ -228,15 +226,13 @@ public class StockMarket extends AppCompatActivity
         ProgressDialog progressDialog;
         ArrayList<String> values;
         @Override
-        protected void onPreExecute()
-        {
+        protected void onPreExecute(){
             progressDialog = ProgressDialog.show(StockMarket.this, "Please Wait!","Fetching Latest Stock Data");
             super.onPreExecute();
             values=new ArrayList<>();
         }
         @Override
-        protected Void doInBackground(Void... voids)
-        {
+        protected Void doInBackground(Void... voids){
             URL url;
             HttpURLConnection urlConnection = null;
             try
@@ -256,6 +252,7 @@ public class StockMarket extends AppCompatActivity
             }
             catch (IOException e)
             {
+                Toast.makeText(StockMarket.this, "Oops! Some Error Occurred!", Toast.LENGTH_SHORT).show();
                 e.printStackTrace();
             }
             finally
@@ -266,8 +263,7 @@ public class StockMarket extends AppCompatActivity
             return null;
         }
         @Override
-        protected void onPostExecute(Void aVoid)
-        {
+        protected void onPostExecute(Void aVoid){
             super.onPostExecute(aVoid);
             int c=0;
             ArrayList<Integer> ids=new ArrayList<>();
@@ -286,5 +282,18 @@ public class StockMarket extends AppCompatActivity
             progressDialog.dismiss();
             Toast.makeText(StockMarket.this, "Tap on a Stock to Interact", Toast.LENGTH_SHORT).show();
         }
+    }
+    String handleSpaces(String s)
+    {
+        String x="";
+        for(int i=0;i<s.length();i++)
+        {
+            char ch= s.charAt(i);
+            if(ch==' ')
+                x=x+"%20";
+            else
+                x=x+ch;
+        }
+        return x;
     }
 }

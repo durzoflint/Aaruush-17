@@ -60,8 +60,7 @@ public class SomeActivity extends AppCompatActivity
         String webPage="";
         ProgressDialog progressDialog;
         @Override
-        protected void onPreExecute()
-        {
+        protected void onPreExecute(){
             progressDialog = ProgressDialog.show(SomeActivity.this, "Please Wait!","Registering for SRM Stock Market");
             super.onPreExecute();
         }
