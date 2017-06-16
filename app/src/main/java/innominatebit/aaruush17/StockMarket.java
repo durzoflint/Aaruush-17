@@ -82,7 +82,7 @@ public class StockMarket extends AppCompatActivity
                                                         {
                                                             EditText stockQuantity=(EditText)stockDetails.findViewById(R.id.stockquantity);
                                                             String input=stockQuantity.getText().toString();
-                                                            if(input.length()>0)
+                                                            if(input.length()>0&&!(input.equals(".")))
                                                             {
                                                                 double quantity=Double.parseDouble(input);
                                                                 if(quantity<=myShares)
@@ -123,7 +123,7 @@ public class StockMarket extends AppCompatActivity
                                                 {
                                                     EditText stockQuantity=(EditText)stockDetails.findViewById(R.id.stockquantity);
                                                     String input=stockQuantity.getText().toString();
-                                                    if(input.length()>0)
+                                                    if(input.length()>0&&!(input.equals(".")))
                                                     {
                                                         double quantity=Double.parseDouble(input);
                                                         TextView valueRemaning=(TextView)findViewById(R.id.valueremaning);
