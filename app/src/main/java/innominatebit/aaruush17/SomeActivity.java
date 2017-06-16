@@ -5,12 +5,10 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -56,7 +54,7 @@ public class SomeActivity extends AppCompatActivity
             }
         });
     }
-    class AddUser extends AsyncTask<String,Void,Void>{
+    private class AddUser extends AsyncTask<String,Void,Void>{
         String webPage="";
         ProgressDialog progressDialog;
         @Override
@@ -83,7 +81,7 @@ public class SomeActivity extends AppCompatActivity
                 urlConnection = (HttpURLConnection) url.openConnection();
                 InputStreamReader isw = new InputStreamReader(urlConnection.getInputStream());
                 BufferedReader br=new BufferedReader(isw);
-                String data="";
+                String data;
                 while ((data=br.readLine()) != null)
                     webPage=webPage+data;
             }
@@ -102,10 +100,17 @@ public class SomeActivity extends AppCompatActivity
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
             String reply;
-            if(webPage.equals("registration successful"))
-                reply="Registration Success";
-            else
-                reply="Registration Failed";
+            switch (webPage) {
+                case "registration successful":
+                    reply = "Registration Success.";
+                    break;
+                case "already exists":
+                    reply = "Your data already exists.";
+                    break;
+                default:
+                    reply = "Registration Failed.";
+                    break;
+            }
             Toast.makeText(SomeActivity.this, reply, Toast.LENGTH_LONG).show();
             progressDialog.dismiss();
         }

@@ -8,12 +8,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -148,7 +146,7 @@ public class StockMarket extends AppCompatActivity
             });
         }
     }
-    class MyData extends AsyncTask<String,Void,Void>{
+    private class MyData extends AsyncTask<String,Void,Void>{
         String cashRemaining="Cash Remaining : ";
         HashMap<String,String> userShares;
         ProgressDialog progressDialog;
@@ -167,7 +165,7 @@ public class StockMarket extends AppCompatActivity
                 url = new URL(strings[0]);
                 urlConnection = (HttpURLConnection) url.openConnection();
                 BufferedReader br=new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
-                String data="",webPage="";
+                String data,webPage="";
                 while ((data=br.readLine()) != null)
                     webPage=webPage+data;
                 while(webPage.indexOf('<')!=-1)
@@ -222,7 +220,7 @@ public class StockMarket extends AppCompatActivity
         }
 
     }
-    class FetchStockData extends AsyncTask<Void,Void,Void>{
+    private class FetchStockData extends AsyncTask<Void,Void,Void>{
         ProgressDialog progressDialog;
         ArrayList<String> values;
         @Override
@@ -241,7 +239,7 @@ public class StockMarket extends AppCompatActivity
                 urlConnection = (HttpURLConnection) url.openConnection();
                 InputStreamReader isw = new InputStreamReader(urlConnection.getInputStream());
                 BufferedReader br=new BufferedReader(isw);
-                String data="",webPage="";
+                String data,webPage="";
                 while ((data=br.readLine()) != null)
                     webPage=webPage+data;
                 while(webPage.indexOf('<')!=-1)
@@ -283,8 +281,7 @@ public class StockMarket extends AppCompatActivity
             Toast.makeText(StockMarket.this, "Tap on a Stock to Interact", Toast.LENGTH_SHORT).show();
         }
     }
-    String handleSpaces(String s)
-    {
+    String handleSpaces(String s){
         String x="";
         for(int i=0;i<s.length();i++)
         {
