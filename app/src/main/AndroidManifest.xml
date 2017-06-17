@@ -18,7 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".StockMarket"></activity>
+        <activity android:name=".StockMarket" />
+        <activity android:name=".LeaderboardActivity"></activity>
     </application>
 
 </manifest>
