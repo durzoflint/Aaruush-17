@@ -1,4 +1,4 @@
-package innominatebit.aaruush17;
+package innominatebit.aaruush17.Authentication;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -15,7 +15,10 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class SomeActivity extends AppCompatActivity
+import innominatebit.aaruush17.R;
+import innominatebit.aaruush17.StockMarket.StockMarket;
+
+public class StockLogin extends AppCompatActivity
 {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +37,7 @@ public class SomeActivity extends AppCompatActivity
                 if(userName.length()>0&&emailID.length()>0)
                     new AddUser().execute(userName, emailID);
                 else
-                    Toast.makeText(SomeActivity.this, "Invalid Data", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(StockLogin.this, "Invalid Data", Toast.LENGTH_SHORT).show();
             }
         });
         Button login=(Button)findViewById(R.id.login);
@@ -45,12 +48,12 @@ public class SomeActivity extends AppCompatActivity
                 String userEmailID=userID.getText().toString();
                 if(userEmailID.length()>0)
                 {
-                    Intent intent = new Intent(SomeActivity.this, StockMarket.class);
+                    Intent intent = new Intent(StockLogin.this, StockMarket.class);
                     intent.putExtra("emailID", userEmailID);
                     startActivity(intent);
                 }
                 else
-                    Toast.makeText(SomeActivity.this, "Invalid Data", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(StockLogin.this, "Invalid Data", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -59,7 +62,7 @@ public class SomeActivity extends AppCompatActivity
         ProgressDialog progressDialog;
         @Override
         protected void onPreExecute(){
-            progressDialog = ProgressDialog.show(SomeActivity.this, "Please Wait!","Registering for SRM Stock Market");
+            progressDialog = ProgressDialog.show(StockLogin.this, "Please Wait!","Registering for SRM Stock Market");
             super.onPreExecute();
         }
         @Override
@@ -111,7 +114,7 @@ public class SomeActivity extends AppCompatActivity
                     reply = "Registration Failed.";
                     break;
             }
-            Toast.makeText(SomeActivity.this, reply, Toast.LENGTH_LONG).show();
+            Toast.makeText(StockLogin.this, reply, Toast.LENGTH_LONG).show();
             progressDialog.dismiss();
         }
     }

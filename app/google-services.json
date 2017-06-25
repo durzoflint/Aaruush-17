@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "630819406699",
+    "project_id": "firebase-aaruush"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:630819406699:android:524bb12ea45ac45c",
+        "android_client_info": {
+          "package_name": "innominatebit.aaruush17"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "630819406699-6di4kgc57eg3qt9jivpc9h3660q2pcb4.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "630819406699-3go6n5ddfug8ql5cv2sqfqk2g73a662r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "innominatebit.aaruush17",
+            "certificate_hash": "72d4f9921e159c924d29e616f424e47ce13857a1"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQJDP5LxkqhJEnd8fljTcPYJlYQgrdyIg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
