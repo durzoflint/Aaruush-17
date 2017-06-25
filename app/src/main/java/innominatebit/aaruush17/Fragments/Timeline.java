@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
@@ -79,7 +80,11 @@ public class Timeline extends Fragment {
 
         username.setText(firstname + " " + lastname);
 
-        Picasso.with(getContext()).load(profilepicture).into(dp);
+        if (profilepicture != "") {
+
+            Picasso.with(getContext()).load(profilepicture).into(dp);
+
+        }
 
 
         // Loading Data In TextView
