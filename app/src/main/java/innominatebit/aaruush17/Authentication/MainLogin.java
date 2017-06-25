@@ -294,7 +294,17 @@ public class MainLogin extends AppCompatActivity implements View.OnClickListener
 
             // Generating Profile Picture For Internal App Uses
 
-            gpprofilepicture = account.getPhotoUrl().toString();
+            if (gpprofilepicture != "") {
+
+                gpprofilepicture = account.getPhotoUrl().toString();
+
+            }
+
+            else {
+
+                gpprofilepicture = "";
+
+            }
 
 
             // Saving Google Details In Local Storage
@@ -312,7 +322,7 @@ public class MainLogin extends AppCompatActivity implements View.OnClickListener
 
         } else {
 
-            Toast.makeText(MainLogin.this, "Google MainLogin Failed!", Toast.LENGTH_LONG).show();
+            Toast.makeText(MainLogin.this, "Google Login Failed!", Toast.LENGTH_LONG).show();
 
         }
 
