@@ -57,6 +57,11 @@
             android:name=".Dashboard"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeNoBarWhite" />
+        <activity
+            android:name=".Extras.PushNotifications"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoBarWhite" />
+
     </application>
 
 </manifest>

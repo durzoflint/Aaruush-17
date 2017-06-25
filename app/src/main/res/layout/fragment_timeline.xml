@@ -106,7 +106,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#0DD3D3D3"
+        android:background="#ECEFF1"
         android:fillViewport="true">
 
         <LinearLayout
