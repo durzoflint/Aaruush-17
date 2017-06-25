@@ -1,4 +1,4 @@
-package innominatebit.aaruush17;
+package innominatebit.aaruush17.StockMarket;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -15,6 +15,8 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
+
+import innominatebit.aaruush17.R;
 
 public class LeaderboardActivity extends AppCompatActivity {
 

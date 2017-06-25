@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="innominatebit.aaruush17.SomeActivity">
+    tools:context="innominatebit.aaruush17.Authentication.StockLogin">
 
     <Button
         android:id="@+id/register"

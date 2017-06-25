@@ -1,4 +1,4 @@
-package innominatebit.aaruush17;
+package innominatebit.aaruush17.StockMarket;
 
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
@@ -24,6 +24,8 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+
+import innominatebit.aaruush17.R;
 
 public class StockMarket extends AppCompatActivity
 {
