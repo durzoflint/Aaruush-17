@@ -1,8 +1,6 @@
 package innominatebit.aaruush17;
 
 import android.content.Intent;
-import android.content.res.ColorStateList;
-import android.graphics.Color;
 import android.graphics.Typeface;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
@@ -12,6 +10,8 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
@@ -22,16 +22,15 @@ import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.common.api.ResultCallback;
-import com.google.android.gms.common.api.Status;
 
 import innominatebit.aaruush17.Adapters.ViewPagerAdapter;
 import innominatebit.aaruush17.Authentication.MainLogin;
 import innominatebit.aaruush17.Authentication.StockLogin;
-import innominatebit.aaruush17.Fragments.Events;
+import innominatebit.aaruush17.Fragments.Domains;
 import innominatebit.aaruush17.Fragments.Hub;
 import innominatebit.aaruush17.Fragments.Timeline;
 import innominatebit.aaruush17.Fragments.Workshops;
+import innominatebit.aaruush17.Extras.PushNotifications;
 import innominatebit.aaruush17.Storage.LocalStorage;
 
 public class Dashboard extends AppCompatActivity implements View.OnClickListener, GoogleApiClient.OnConnectionFailedListener {
@@ -49,6 +48,8 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
     private Intent stockmarket;
 
     private Intent mainlogin;
+
+    private Intent notifications;
 
     private TextView header;
 
@@ -139,6 +140,10 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
 
+        setSupportActionBar(toolbar);
+
+        getSupportActionBar().setTitle(null);
+
 
         // Initializing Navigation Drawer
 
@@ -155,7 +160,7 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
 
         adapter.addFragment(new Timeline(), "Timeline");
 
-        adapter.addFragment(new Events(), "Events");
+        adapter.addFragment(new Domains(), "Domains");
 
         adapter.addFragment(new Workshops(), "WShops");
 
@@ -273,9 +278,37 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
     }
 
 
-    @Override
-    public void onConnectionFailed(ConnectionResult connectionResult) {
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        MenuInflater inflater = getMenuInflater();
+
+        inflater.inflate(R.menu.bell, menu);
+
+        return true;
+
     }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int id = item.getItemId();
+
+        if (id == R.id.bell) {
+
+            notifications = new Intent(Dashboard.this, PushNotifications.class);
+
+            startActivity(notifications);
+
+        }
+
+        return super.onOptionsItemSelected(item);
+
+    }
+
+
+    @Override
+    public void onConnectionFailed(ConnectionResult connectionResult) {}
 
 
     @Override
