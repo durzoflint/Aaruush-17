@@ -1,9 +1,16 @@
 package innominatebit.aaruush17.Authentication;
 
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.ScaleDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Base64;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -29,6 +36,8 @@ import com.google.android.gms.common.api.OptionalPendingResult;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 
 import innominatebit.aaruush17.Dashboard;
@@ -48,7 +57,6 @@ public class MainLogin extends AppCompatActivity implements View.OnClickListener
     private LocalStorage session;
 
     private Intent dashboard;
-
 
     // Google Declarations
 
@@ -322,7 +330,7 @@ public class MainLogin extends AppCompatActivity implements View.OnClickListener
 
         } else {
 
-            Toast.makeText(MainLogin.this, "Google Login Failed!", Toast.LENGTH_LONG).show();
+            Toast.makeText(MainLogin.this, "Error", Toast.LENGTH_LONG).show();
 
         }
 

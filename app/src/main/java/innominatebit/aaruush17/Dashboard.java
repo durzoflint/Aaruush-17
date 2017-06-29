@@ -207,15 +207,6 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
                         break;
 
 
-                    case R.id.settings:
-
-                        Toast.makeText(Dashboard.this, "In Development", Toast.LENGTH_LONG).show();
-
-                        drawerLayout.closeDrawers();
-
-                        break;
-
-
                     case R.id.logout:
 
                         // Logout Of Facebook
@@ -314,8 +305,6 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
     @Override
     public void onClick(View view) {
 
-
     }
-
 
 }

@@ -5,14 +5,39 @@
     <group android:checkableBehavior="single">
 
         <item
+            android:id="@+id/sponsors"
+            android:icon="@drawable/sponsors"
+            android:title="@string/sponsors" />
+
+        <item
             android:id="@+id/stockmarket"
             android:icon="@drawable/stock"
             android:title="@string/stockmarket" />
 
         <item
-            android:id="@+id/settings"
-            android:icon="@drawable/settings"
-            android:title="@string/settings" />
+            android:id="@+id/highlights"
+            android:icon="@drawable/highlights"
+            android:title="@string/highlights" />
+
+        <item
+            android:id="@+id/aboutus"
+            android:icon="@drawable/aboutus"
+            android:title="@string/aboutus" />
+
+        <item
+            android:id="@+id/patrons"
+            android:icon="@drawable/patrons"
+            android:title="@string/patrons" />
+
+        <item
+            android:id="@+id/team"
+            android:icon="@drawable/ourteam"
+            android:title="@string/team" />
+
+        <item
+            android:id="@+id/developers"
+            android:icon="@drawable/developers"
+            android:title="@string/developers" />
 
         <item
             android:id="@+id/logout"
