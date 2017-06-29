@@ -35,14 +35,20 @@
                     android:layout_marginRight="5sp"
                     android:background="@drawable/roundbutton">
 
+                    <ImageView
+                        android:layout_width="20sp"
+                        android:layout_height="20sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10sp"
+                        android:contentDescription="@string/icon"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/calendar" />
+
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="?attr/selectableItemBackgroundBorderless"
-                        android:drawableStart="@drawable/calendericon"
                         android:fontFamily="sans-serif-smallcaps"
-                        android:paddingLeft="10sp"
-                        android:paddingStart="10sp"
                         android:text="Day/Time"
                         android:textColor="@color/white" />
 
@@ -66,14 +72,20 @@
                     android:layout_marginStart="5sp"
                     android:background="@drawable/roundbutton">
 
+                    <ImageView
+                        android:layout_width="20sp"
+                        android:layout_height="20sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5sp"
+                        android:contentDescription="@string/icon"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/database" />
+
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="?attr/selectableItemBackgroundBorderless"
-                        android:drawableStart="@drawable/databaseicon"
                         android:fontFamily="sans-serif-smallcaps"
-                        android:paddingLeft="5sp"
-                        android:paddingStart="5sp"
                         android:text="Alphabetical"
                         android:textColor="@color/white" />
 
@@ -129,66 +141,193 @@
                     android:textColor="#000000"
                     android:textSize="17sp" />
 
-                <Button
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="60sp"
                     android:layout_marginLeft="15sp"
                     android:layout_marginRight="15sp"
                     android:layout_marginTop="15sp"
-                    android:background="@drawable/buttonshadow"
-                    android:drawableLeft="@drawable/domeicon"
-                    android:drawablePadding="20sp"
-                    android:drawableRight="@drawable/staricon"
-                    android:paddingEnd="15sp"
-                    android:paddingStart="15sp"
-                    android:text="Buildify"
-                    android:textAlignment="textStart" />
+                    android:background="@drawable/buttonshadow">
 
-                <Button
+                    <ImageView
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5sp"
+                        android:contentDescription="@string/icon"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/dome" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="?attr/selectableItemBackground"
+                            android:drawablePadding="20sp"
+                            android:paddingEnd="10sp"
+                            android:paddingStart="20sp"
+                            android:text="Buildify"
+                            android:textAlignment="textStart" />
+
+                        <ImageView
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="5sp"
+                            android:contentDescription="@string/icon"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/star" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="60sp"
                     android:layout_marginLeft="15sp"
                     android:layout_marginRight="15sp"
                     android:layout_marginTop="5sp"
-                    android:background="@drawable/buttonshadow"
-                    android:drawableLeft="@drawable/briefcaseicon"
-                    android:drawablePadding="20sp"
-                    android:drawableRight="@drawable/staricon"
-                    android:paddingEnd="15sp"
-                    android:paddingStart="15sp"
-                    android:text="Ad-Bees"
-                    android:textAlignment="textStart" />
+                    android:background="@drawable/buttonshadow">
 
-                <Button
+                    <ImageView
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5sp"
+                        android:contentDescription="@string/icon"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/briefcase" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="?attr/selectableItemBackground"
+                            android:drawablePadding="20sp"
+                            android:paddingEnd="10sp"
+                            android:paddingStart="20sp"
+                            android:text="Ad-Bees"
+                            android:textAlignment="textStart" />
+
+                        <ImageView
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="5sp"
+                            android:contentDescription="@string/icon"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/star" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="60sp"
                     android:layout_marginLeft="15sp"
                     android:layout_marginRight="15sp"
                     android:layout_marginTop="5sp"
-                    android:background="@drawable/buttonshadow"
-                    android:drawableLeft="@drawable/simicon"
-                    android:drawablePadding="20sp"
-                    android:drawableRight="@drawable/staricon"
-                    android:paddingEnd="15sp"
-                    android:paddingStart="15sp"
-                    android:text="Digito Mania"
-                    android:textAlignment="textStart" />
+                    android:background="@drawable/buttonshadow">
 
-                <Button
+                    <ImageView
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5sp"
+                        android:contentDescription="@string/icon"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/sim" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="?attr/selectableItemBackground"
+                            android:drawablePadding="20sp"
+                            android:paddingEnd="10sp"
+                            android:paddingStart="20sp"
+                            android:text="Digito Mania"
+                            android:textAlignment="textStart" />
+
+                        <ImageView
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="5sp"
+                            android:contentDescription="@string/icon"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/star" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="60sp"
-                    android:layout_marginBottom="20sp"
                     android:layout_marginLeft="15sp"
                     android:layout_marginRight="15sp"
                     android:layout_marginTop="5sp"
-                    android:background="@drawable/buttonshadow"
-                    android:drawableLeft="@drawable/codeicon"
-                    android:drawablePadding="20sp"
-                    android:drawableRight="@drawable/staricon"
-                    android:paddingEnd="15sp"
-                    android:paddingStart="15sp"
-                    android:text="Source Code 2.0"
-                    android:textAlignment="textStart" />
+                    android:background="@drawable/buttonshadow">
+
+                    <ImageView
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5sp"
+                        android:contentDescription="@string/icon"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/code" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="?attr/selectableItemBackground"
+                            android:drawablePadding="20sp"
+                            android:paddingEnd="10sp"
+                            android:paddingStart="20sp"
+                            android:text="Source Code 2.0"
+                            android:textAlignment="textStart" />
+
+                        <ImageView
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="5sp"
+                            android:contentDescription="@string/icon"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/star" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -207,81 +346,242 @@
                     android:textColor="#000000"
                     android:textSize="17sp" />
 
-                <Button
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="60sp"
                     android:layout_marginLeft="15sp"
                     android:layout_marginRight="15sp"
                     android:layout_marginTop="15sp"
-                    android:background="@drawable/buttonshadow"
-                    android:drawableLeft="@drawable/cameraicon"
-                    android:drawablePadding="20sp"
-                    android:drawableRight="@drawable/bstaricon"
-                    android:paddingEnd="15sp"
-                    android:paddingStart="15sp"
-                    android:text="Click It"
-                    android:textAlignment="textStart" />
+                    android:clickable="true"
+                    android:background="@drawable/buttonshadow">
 
-                <Button
+                    <ImageView
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5sp"
+                        android:contentDescription="@string/icon"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/camera" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="?attr/selectableItemBackground"
+                            android:drawablePadding="20sp"
+                            android:paddingEnd="10sp"
+                            android:paddingStart="20sp"
+                            android:text="Click It"
+                            android:textAlignment="textStart" />
+
+                        <ImageView
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="5sp"
+                            android:contentDescription="@string/icon"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/bstar" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="60sp"
                     android:layout_marginLeft="15sp"
                     android:layout_marginRight="15sp"
                     android:layout_marginTop="5sp"
-                    android:background="@drawable/buttonshadow"
-                    android:drawableLeft="@drawable/domeicon"
-                    android:drawablePadding="20sp"
-                    android:drawableRight="@drawable/bstaricon"
-                    android:paddingEnd="15sp"
-                    android:paddingStart="15sp"
-                    android:text="Buildify"
-                    android:textAlignment="textStart" />
+                    android:background="@drawable/buttonshadow">
 
-                <Button
+                    <ImageView
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5sp"
+                        android:contentDescription="@string/icon"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/dome" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="?attr/selectableItemBackground"
+                            android:drawablePadding="20sp"
+                            android:paddingEnd="10sp"
+                            android:paddingStart="20sp"
+                            android:text="Buildify"
+                            android:textAlignment="textStart" />
+
+                        <ImageView
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="5sp"
+                            android:contentDescription="@string/icon"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/bstar" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="60sp"
                     android:layout_marginLeft="15sp"
                     android:layout_marginRight="15sp"
                     android:layout_marginTop="5sp"
-                    android:background="@drawable/buttonshadow"
-                    android:drawableLeft="@drawable/briefcaseicon"
-                    android:drawablePadding="20sp"
-                    android:drawableRight="@drawable/bstaricon"
-                    android:paddingEnd="15sp"
-                    android:paddingStart="15sp"
-                    android:text="Ad-Bees"
-                    android:textAlignment="textStart" />
+                    android:background="@drawable/buttonshadow">
 
-                <Button
+                    <ImageView
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5sp"
+                        android:contentDescription="@string/icon"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/briefcase" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="?attr/selectableItemBackground"
+                            android:drawablePadding="20sp"
+                            android:paddingEnd="10sp"
+                            android:paddingStart="20sp"
+                            android:text="Ad-Bees"
+                            android:textAlignment="textStart" />
+
+                        <ImageView
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="5sp"
+                            android:contentDescription="@string/icon"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/bstar" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="60sp"
                     android:layout_marginLeft="15sp"
                     android:layout_marginRight="15sp"
                     android:layout_marginTop="5sp"
-                    android:background="@drawable/buttonshadow"
-                    android:drawableLeft="@drawable/simicon"
-                    android:drawablePadding="20sp"
-                    android:drawableRight="@drawable/bstaricon"
-                    android:paddingEnd="15sp"
-                    android:paddingStart="15sp"
-                    android:text="Digito Mania"
-                    android:textAlignment="textStart" />
+                    android:background="@drawable/buttonshadow">
 
-                <Button
+                    <ImageView
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5sp"
+                        android:contentDescription="@string/icon"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/sim" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="?attr/selectableItemBackground"
+                            android:drawablePadding="20sp"
+                            android:paddingEnd="10sp"
+                            android:paddingStart="20sp"
+                            android:text="Digito Mania"
+                            android:textAlignment="textStart" />
+
+                        <ImageView
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="5sp"
+                            android:contentDescription="@string/icon"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/bstar" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="60sp"
-                    android:layout_marginBottom="10sp"
                     android:layout_marginLeft="15sp"
                     android:layout_marginRight="15sp"
                     android:layout_marginTop="5sp"
-                    android:background="@drawable/buttonshadow"
-                    android:drawableLeft="@drawable/codeicon"
-                    android:drawablePadding="20sp"
-                    android:drawableRight="@drawable/bstaricon"
-                    android:paddingEnd="15sp"
-                    android:paddingStart="15sp"
-                    android:text="Source Code 2.0"
-                    android:textAlignment="textStart" />
+                    android:layout_marginBottom="15sp"
+                    android:background="@drawable/buttonshadow">
+
+                    <ImageView
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5sp"
+                        android:contentDescription="@string/icon"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/code" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="?attr/selectableItemBackground"
+                            android:drawablePadding="20sp"
+                            android:paddingEnd="10sp"
+                            android:paddingStart="20sp"
+                            android:text="Source Code 2.0"
+                            android:textAlignment="textStart" />
+
+                        <ImageView
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="5sp"
+                            android:contentDescription="@string/icon"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/bstar" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
 
             </LinearLayout>
 

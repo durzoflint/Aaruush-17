@@ -36,17 +36,34 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <Button
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="60sp"
-                        android:background="@drawable/buttonshadow"
-                        android:drawablePadding="20sp"
-                        android:drawableRight="@drawable/bookmarkicon"
                         android:paddingEnd="10sp"
                         android:paddingStart="10sp"
-                        android:text="SHARE"
-                        android:textAlignment="textStart"
-                        android:textSize="16sp" />
+                        android:background="@drawable/buttonshadow">
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="?attr/selectableItemBackground"
+                                android:drawablePadding="20sp"
+                                android:paddingEnd="10sp"
+                                android:paddingStart="10sp"
+                                android:text="Share"
+                                android:textAlignment="textStart" />
+
+                            <ImageView
+                                android:layout_width="30sp"
+                                android:layout_height="30sp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="5sp"
+                                android:contentDescription="@string/icon"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/bookmark" />
+
+                    </LinearLayout>
 
                 </FrameLayout>
 
@@ -80,17 +97,34 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <Button
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="60sp"
-                        android:background="@drawable/buttonshadow"
-                        android:drawablePadding="20sp"
-                        android:drawableRight="@drawable/bookmarkicon"
                         android:paddingEnd="10sp"
                         android:paddingStart="10sp"
-                        android:text="SHARE"
-                        android:textAlignment="textStart"
-                        android:textSize="16sp" />
+                        android:background="@drawable/buttonshadow">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="?attr/selectableItemBackground"
+                            android:drawablePadding="20sp"
+                            android:paddingEnd="10sp"
+                            android:paddingStart="10sp"
+                            android:text="Share"
+                            android:textAlignment="textStart" />
+
+                        <ImageView
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="5sp"
+                            android:contentDescription="@string/icon"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/bookmark" />
+
+                    </LinearLayout>
 
                 </FrameLayout>
 
@@ -125,17 +159,34 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <Button
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="60sp"
-                        android:background="@drawable/buttonshadow"
-                        android:drawablePadding="20sp"
-                        android:drawableRight="@drawable/bookmarkicon"
                         android:paddingEnd="10sp"
                         android:paddingStart="10sp"
-                        android:text="SHARE"
-                        android:textAlignment="textStart"
-                        android:textSize="16sp" />
+                        android:background="@drawable/buttonshadow">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="?attr/selectableItemBackground"
+                            android:drawablePadding="20sp"
+                            android:paddingEnd="10sp"
+                            android:paddingStart="10sp"
+                            android:text="Share"
+                            android:textAlignment="textStart" />
+
+                        <ImageView
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="5sp"
+                            android:contentDescription="@string/icon"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/bookmark" />
+
+                    </LinearLayout>
 
                 </FrameLayout>
 

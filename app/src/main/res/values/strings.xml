@@ -6,6 +6,8 @@
     <string name="fblogin">Sign In with Facebook</string>
     <string name="googlelogin">Sign In with Google</string>
 
+    <string name="icon">Icon</string>
+
     <string name="facebook_app_id">245206459312176</string>
     <string name="fb_login_protocol_scheme">fb245206459312176</string>
 
@@ -19,6 +21,12 @@
 
     <string name="notifications">Notifications</string>
 
+    <string name="sponsors">Sponsors</string>
+    <string name="highlights">Highlights</string>
+    <string name="aboutus">About Us</string>
+    <string name="patrons">Patrons</string>
+    <string name="team">Team</string>
+    <string name="developers">Meet The Devs</string>
     <string name="logout">Logout</string>
 
     <!-- TODO: Remove or change this placeholder text -->
