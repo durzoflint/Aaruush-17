@@ -1,7 +1,9 @@
 {
   "project_info": {
     "project_number": "630819406699",
-    "project_id": "firebase-aaruush"
+    "firebase_url": "https://fir-aaruush.firebaseio.com",
+    "project_id": "firebase-aaruush",
+    "storage_bucket": "firebase-aaruush.appspot.com"
   },
   "client": [
     {
@@ -12,6 +14,26 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "630819406699-a6pab6nv1juh9epthf58mmjpsjajuc5u.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "630819406699-1h084j9oe4vfue6fnm8ujodgk6hfedn8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "innominatebit.aaruush17",
+            "certificate_hash": "a29b399f5a4701dfd6408da39b1e52e391e92743"
+          }
+        },
+        {
+          "client_id": "630819406699-eicgsqrrmlq78rhu9r1ie7rcdfvmkl34.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "innominatebit.aaruush17",
+            "certificate_hash": "adbbd1637540b150b40f9558f64b0121b36189b6"
+          }
+        },
         {
           "client_id": "630819406699-6di4kgc57eg3qt9jivpc9h3660q2pcb4.apps.googleusercontent.com",
           "client_type": 3
@@ -35,11 +57,16 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "630819406699-a6pab6nv1juh9epthf58mmjpsjajuc5u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
-          "status": 1
+          "status": 2
         }
       }
     }
