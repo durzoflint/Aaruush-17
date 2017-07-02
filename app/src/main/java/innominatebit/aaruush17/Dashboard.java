@@ -10,6 +10,8 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -31,6 +33,12 @@ import innominatebit.aaruush17.Fragments.Hub;
 import innominatebit.aaruush17.Fragments.Timeline;
 import innominatebit.aaruush17.Fragments.Workshops;
 import innominatebit.aaruush17.Extras.PushNotifications;
+import innominatebit.aaruush17.NavigationDrawerElements.AboutUs;
+import innominatebit.aaruush17.NavigationDrawerElements.Highlights;
+import innominatebit.aaruush17.NavigationDrawerElements.MeetTheDevs;
+import innominatebit.aaruush17.NavigationDrawerElements.Patrons;
+import innominatebit.aaruush17.NavigationDrawerElements.Sponsors;
+import innominatebit.aaruush17.NavigationDrawerElements.Team;
 import innominatebit.aaruush17.Storage.LocalStorage;
 
 public class Dashboard extends AppCompatActivity implements View.OnClickListener, GoogleApiClient.OnConnectionFailedListener {
@@ -45,7 +53,19 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
 
     private ActionBarDrawerToggle dtoogle;
 
+    private Intent sponsors;
+
     private Intent stockmarket;
+
+    private Intent highlights;
+
+    private Intent aboutus;
+
+    private Intent patrons;
+
+    private Intent team;
+
+    private Intent meetthedevs;
 
     private Intent mainlogin;
 
@@ -113,6 +133,8 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
         // Setting Up View Pager
 
         viewpager = (ViewPager) findViewById(R.id.viewpager);
+
+        viewpager.setOffscreenPageLimit(69);
 
         setUpViewPager(viewpager);
 
@@ -196,11 +218,91 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
 
                 switch (id) {
 
+                    case R.id.sponsors:
+
+                        sponsors = new Intent(Dashboard.this, Sponsors.class);
+
+                        startActivity(sponsors);
+
+                        finish();
+
+                        drawerLayout.closeDrawers();
+
+                        break;
+
+
                     case R.id.stockmarket:
 
                         stockmarket = new Intent(Dashboard.this, StockLogin.class);
 
                         startActivity(stockmarket);
+
+                        finish();
+
+                        drawerLayout.closeDrawers();
+
+                        break;
+
+
+                    case R.id.highlights:
+
+                        highlights = new Intent(Dashboard.this, Highlights.class);
+
+                        startActivity(highlights);
+
+                        finish();
+
+                        drawerLayout.closeDrawers();
+
+                        break;
+
+
+                    case R.id.aboutus:
+
+                        aboutus = new Intent(Dashboard.this, AboutUs.class);
+
+                        startActivity(aboutus);
+
+                        finish();
+
+                        drawerLayout.closeDrawers();
+
+                        break;
+
+
+                    case R.id.patrons:
+
+                        patrons = new Intent(Dashboard.this, Patrons.class);
+
+                        startActivity(patrons);
+
+                        finish();
+
+                        drawerLayout.closeDrawers();
+
+                        break;
+
+
+                    case R.id.team:
+
+                        team = new Intent(Dashboard.this, Team.class);
+
+                        startActivity(team);
+
+                        finish();
+
+                        drawerLayout.closeDrawers();
+
+                        break;
+
+
+                    case R.id.developers:
+
+                        meetthedevs = new Intent(Dashboard.this, MeetTheDevs.class);
+
+                        startActivity(meetthedevs);
+
+                        finish();
 
                         drawerLayout.closeDrawers();
 

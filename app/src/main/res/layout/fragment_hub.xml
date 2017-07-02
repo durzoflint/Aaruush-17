@@ -1,13 +1,60 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="innominatebit.aaruush17.Fragments.Hub">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
-</FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ECEFF1"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:id="@+id/my_tweet_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:orientation="vertical" />
+
+        </ScrollView>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/twitter"
+                android:layout_width="150sp"
+                android:layout_height="150sp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="50sp"
+                android:src="@drawable/twitter" />
+
+            <TextView
+                android:id="@+id/loadingtext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="100sp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:gravity="center"
+                android:text="LOADING TWEETS"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+
+
+</android.support.v4.widget.SwipeRefreshLayout>
