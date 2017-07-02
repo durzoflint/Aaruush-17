@@ -155,6 +155,30 @@ public class MainLogin extends AppCompatActivity implements View.OnClickListener
         session = new LocalStorage(getApplicationContext());
 
 
+        // Generating Facebook Keystore Hash; TO BE REMOVED AFTER USE
+
+
+        try {
+
+            PackageInfo info = getPackageManager().getPackageInfo("innominatebit.aaruush17", PackageManager.GET_SIGNATURES);
+
+            for (Signature signature : info.signatures) {
+
+                MessageDigest md = MessageDigest.getInstance("SHA");
+
+                md.update(signature.toByteArray());
+
+                Log.d("HASH (FOR ABHINAV):", Base64.encodeToString(md.digest(), Base64.DEFAULT));
+
+            }
+
+        } catch (PackageManager.NameNotFoundException e) {
+
+        } catch (NoSuchAlgorithmException e) {
+
+        }
+
+
         // Variable Declarations
 
         logotext = (TextView) findViewById(R.id.logotext);
@@ -306,9 +330,7 @@ public class MainLogin extends AppCompatActivity implements View.OnClickListener
 
                 gpprofilepicture = account.getPhotoUrl().toString();
 
-            }
-
-            else {
+            } else {
 
                 gpprofilepicture = "";
 
@@ -338,7 +360,8 @@ public class MainLogin extends AppCompatActivity implements View.OnClickListener
 
 
     @Override
-    public void onConnectionFailed(ConnectionResult connectionResult) {}
+    public void onConnectionFailed(ConnectionResult connectionResult) {
+    }
 
 
     @Override

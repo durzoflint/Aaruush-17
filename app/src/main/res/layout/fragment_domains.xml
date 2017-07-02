@@ -1,5 +1,4 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -352,8 +351,8 @@
                     android:layout_marginLeft="15sp"
                     android:layout_marginRight="15sp"
                     android:layout_marginTop="15sp"
-                    android:clickable="true"
-                    android:background="@drawable/buttonshadow">
+                    android:background="@drawable/buttonshadow"
+                    android:clickable="true">
 
                     <ImageView
                         android:layout_width="30sp"
@@ -382,10 +381,12 @@
                             android:textAlignment="textStart" />
 
                         <ImageView
+                            android:id="@+id/clickitstar"
                             android:layout_width="30sp"
                             android:layout_height="30sp"
                             android:layout_gravity="center_vertical"
                             android:layout_marginEnd="5sp"
+                            android:clickable="true"
                             android:contentDescription="@string/icon"
                             android:scaleType="fitXY"
                             android:src="@drawable/bstar" />
@@ -429,10 +430,12 @@
                             android:textAlignment="textStart" />
 
                         <ImageView
+                            android:id="@+id/buildifystar"
                             android:layout_width="30sp"
                             android:layout_height="30sp"
                             android:layout_gravity="center_vertical"
                             android:layout_marginEnd="5sp"
+                            android:clickable="true"
                             android:contentDescription="@string/icon"
                             android:scaleType="fitXY"
                             android:src="@drawable/bstar" />
@@ -476,10 +479,12 @@
                             android:textAlignment="textStart" />
 
                         <ImageView
+                            android:id="@+id/adbeesstar"
                             android:layout_width="30sp"
                             android:layout_height="30sp"
                             android:layout_gravity="center_vertical"
                             android:layout_marginEnd="5sp"
+                            android:clickable="true"
                             android:contentDescription="@string/icon"
                             android:scaleType="fitXY"
                             android:src="@drawable/bstar" />
@@ -523,6 +528,7 @@
                             android:textAlignment="textStart" />
 
                         <ImageView
+                            android:id="@+id/digitomaniastar"
                             android:layout_width="30sp"
                             android:layout_height="30sp"
                             android:layout_gravity="center_vertical"
@@ -538,10 +544,10 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="60sp"
+                    android:layout_marginBottom="15sp"
                     android:layout_marginLeft="15sp"
                     android:layout_marginRight="15sp"
                     android:layout_marginTop="5sp"
-                    android:layout_marginBottom="15sp"
                     android:background="@drawable/buttonshadow">
 
                     <ImageView
@@ -571,10 +577,12 @@
                             android:textAlignment="textStart" />
 
                         <ImageView
+                            android:id="@+id/sourcecodestar"
                             android:layout_width="30sp"
                             android:layout_height="30sp"
                             android:layout_gravity="center_vertical"
                             android:layout_marginEnd="5sp"
+                            android:clickable="true"
                             android:contentDescription="@string/icon"
                             android:scaleType="fitXY"
                             android:src="@drawable/bstar" />

@@ -20,6 +20,7 @@
     <string name="testname">Aditya Das</string>
 
     <string name="notifications">Notifications</string>
+    <string name="picturetransition">picture_transition</string>
 
     <string name="sponsors">Sponsors</string>
     <string name="highlights">Highlights</string>
@@ -29,7 +30,7 @@
     <string name="developers">Meet The Devs</string>
     <string name="logout">Logout</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="com.twitter.sdk.android.CONSUMER_KEY">1oh5jqgVbxotvSCWBMvt94xWb</string>
+    <string name="com.twitter.sdk.android.CONSUMER_SECRET">lnpjToXr58y2xOD3q4ZUpoMqFhGTJ1b43RcQMOvlLq1sQ1u6Pm</string>
 
 </resources>

@@ -56,11 +56,11 @@
             <ImageView
                 android:layout_width="30sp"
                 android:layout_height="30sp"
-                android:src="@drawable/facebook"
-                android:scaleType="fitXY"
+                android:layout_gravity="center_vertical"
                 android:layout_marginStart="20sp"
                 android:contentDescription="@string/icon"
-                android:layout_gravity="center_vertical"/>
+                android:scaleType="fitXY"
+                android:src="@drawable/facebook" />
 
             <Button
                 android:id="@+id/facebooklogin"
@@ -83,11 +83,11 @@
             <ImageView
                 android:layout_width="30sp"
                 android:layout_height="30sp"
-                android:src="@drawable/google"
-                android:scaleType="fitXY"
+                android:layout_gravity="center_vertical"
                 android:layout_marginStart="20sp"
                 android:contentDescription="@string/icon"
-                android:layout_gravity="center_vertical"/>
+                android:scaleType="fitXY"
+                android:src="@drawable/google" />
 
             <Button
                 android:id="@+id/googlelogin"

@@ -12,13 +12,14 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="250sp"
+            android:layout_height="wrap_content"
             android:layout_margin="10sp"
             android:orientation="vertical">
 
-            <FrameLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
                 <FrameLayout
                     android:layout_width="match_parent"
@@ -28,6 +29,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5sp"
+                        android:adjustViewBounds="true"
                         android:src="@drawable/engine" />
 
                 </FrameLayout>
@@ -39,47 +41,48 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="60sp"
+                        android:background="@drawable/sharebox"
                         android:paddingEnd="10sp"
-                        android:paddingStart="10sp"
-                        android:background="@drawable/buttonshadow">
+                        android:paddingStart="10sp">
 
-                            <Button
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:background="?attr/selectableItemBackground"
-                                android:drawablePadding="20sp"
-                                android:paddingEnd="10sp"
-                                android:paddingStart="10sp"
-                                android:text="Share"
-                                android:textAlignment="textStart" />
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="?attr/selectableItemBackground"
+                            android:drawablePadding="20sp"
+                            android:paddingEnd="10sp"
+                            android:paddingStart="10sp"
+                            android:text="Share"
+                            android:textAlignment="textStart" />
 
-                            <ImageView
-                                android:layout_width="30sp"
-                                android:layout_height="30sp"
-                                android:layout_gravity="center_vertical"
-                                android:layout_marginEnd="5sp"
-                                android:contentDescription="@string/icon"
-                                android:scaleType="fitXY"
-                                android:src="@drawable/bookmark" />
+                        <ImageView
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="5sp"
+                            android:contentDescription="@string/icon"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/bookmark" />
 
                     </LinearLayout>
 
                 </FrameLayout>
 
-            </FrameLayout>
+            </LinearLayout>
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="250sp"
+            android:layout_height="wrap_content"
             android:layout_margin="10sp"
             android:orientation="vertical">
 
-            <FrameLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
                 <FrameLayout
                     android:layout_width="match_parent"
@@ -89,6 +92,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5sp"
+                        android:adjustViewBounds="true"
                         android:src="@drawable/brain" />
 
                 </FrameLayout>
@@ -100,9 +104,9 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="60sp"
+                        android:background="@drawable/buttonshadow"
                         android:paddingEnd="10sp"
-                        android:paddingStart="10sp"
-                        android:background="@drawable/buttonshadow">
+                        android:paddingStart="10sp">
 
                         <Button
                             android:layout_width="match_parent"
@@ -128,20 +132,21 @@
 
                 </FrameLayout>
 
-            </FrameLayout>
+            </LinearLayout>
 
         </LinearLayout>
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="250sp"
+            android:layout_height="wrap_content"
             android:layout_margin="10sp"
             android:orientation="vertical">
 
-            <FrameLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
                 <FrameLayout
                     android:layout_width="match_parent"
@@ -151,6 +156,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5sp"
+                        android:adjustViewBounds="true"
                         android:src="@drawable/print" />
 
                 </FrameLayout>
@@ -162,9 +168,9 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="60sp"
+                        android:background="@drawable/buttonshadow"
                         android:paddingEnd="10sp"
-                        android:paddingStart="10sp"
-                        android:background="@drawable/buttonshadow">
+                        android:paddingStart="10sp">
 
                         <Button
                             android:layout_width="match_parent"
@@ -190,7 +196,7 @@
 
                 </FrameLayout>
 
-            </FrameLayout>
+            </LinearLayout>
 
         </LinearLayout>
 
