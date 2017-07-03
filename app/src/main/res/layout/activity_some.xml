@@ -1,69 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="innominatebit.aaruush17.Authentication.StockLogin">
+    android:fitsSystemWindows="true">
 
-    <Button
-        android:id="@+id/register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/loginmail"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="24dp"
-        android:text="Register" />
-
-    <EditText
-        android:id="@+id/enteredemailid"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/register"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="12dp"
-        android:ems="15"
-        android:gravity="center_horizontal"
-        android:hint="Please enter your Email ID"
-        android:inputType="textPersonName" />
-
-    <EditText
-        android:id="@+id/name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:gravity="center_horizontal"
-        android:hint="Enter name"
-        android:inputType="textPersonName"
-        android:layout_above="@+id/enteredemailid"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="21dp" />
-
-    <View
+    <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_above="@+id/loginmail"
-        android:layout_marginBottom="10dp"
-        android:background="@android:color/darker_gray" />
+        android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/loginmail"
-        android:layout_width="wrap_content"
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary">
+
+            <TextView
+                android:id="@+id/headertext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/highlights"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:ems="15"
-        android:gravity="center_horizontal"
-        android:hint="Enter Emaill ID"
-        android:inputType="textPersonName" />
+        android:layout_gravity="center"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/register"
-        android:layout_below="@+id/loginmail"
-        android:layout_marginTop="25dp"
-        android:text="Login" />
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20sp">
 
-</RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/introheader"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:background="@color/colorPrimary">
+
+                    <ImageView
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10sp"
+                        android:background="@drawable/star" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="20sp"
+                        android:layout_marginStart="20sp"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:text="STOCK LOGIN"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/introheader"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="200sp"
+                        android:gravity="bottom"
+                        android:orientation="vertical"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/name"
+                            android:layout_width="match_parent"
+                            android:layout_height="50sp"
+                            android:layout_margin="10sp"
+                            android:background="@drawable/border"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:gravity="center"
+                            android:paddingEnd="20sp"
+                            android:paddingStart="20sp"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/email"
+                            android:layout_width="match_parent"
+                            android:layout_height="50sp"
+                            android:layout_margin="10sp"
+                            android:background="@drawable/border"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:gravity="center"
+                            android:paddingEnd="20sp"
+                            android:paddingStart="20sp"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50sp"
+                            android:background="@color/colorPrimary">
+
+                            <Button
+                                android:id="@+id/login"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="bottom"
+                                android:background="?attr/selectableItemBackground"
+                                android:text="Login"
+                                android:textColor="@color/white"
+                                android:textSize="17sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

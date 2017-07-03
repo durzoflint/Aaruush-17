@@ -65,7 +65,7 @@
         <activity
             android:name=".Authentication.StockLogin"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppThemeNoBarWhite" />
         <activity
             android:name=".Dashboard"
             android:screenOrientation="portrait"
