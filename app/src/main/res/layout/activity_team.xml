@@ -1310,7 +1310,7 @@
                         android:id="@+id/dp12"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/logo" />
+                        android:src="@drawable/sivansh" />
 
                 </LinearLayout>
 
@@ -2586,7 +2586,7 @@
                         android:id="@+id/dp23"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/logo" />
+                        android:src="@drawable/sashank" />
 
                 </LinearLayout>
 
