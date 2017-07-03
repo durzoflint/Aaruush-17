@@ -50,31 +50,56 @@ import innominatebit.aaruush17.StockMarket.StockMarket;
 import innominatebit.aaruush17.Storage.LocalStorage;
 
 public class Dashboard extends AppCompatActivity implements View.OnClickListener, GoogleApiClient.OnConnectionFailedListener {
+
     private String email;
+
     private Typeface logo;
+
     private LocalStorage session;
+
     private NavigationView nview;
+
     private DrawerLayout drawerLayout;
+
     private ActionBarDrawerToggle dtoogle;
+
     private Intent sponsors;
+
     private Intent highlights;
+
     private Intent aboutus;
+
     private Intent patrons;
+
     private Intent team;
+
     private Intent meetthedevs;
+
     private Intent mainlogin;
+
     private Intent notifications;
+
     private TextView header;
+
     private TextView name;
+
     private Toolbar toolbar;
+
     private ViewPager viewpager;
+
     private TabLayout tablayout;
+
     private ViewPagerAdapter adapter;
+
     // Google Declarations
+
     private GoogleSignInOptions gso;
+
     private GoogleApiClient gapiclient;
+
     // Facebook Declarations
     private LoginManager manager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

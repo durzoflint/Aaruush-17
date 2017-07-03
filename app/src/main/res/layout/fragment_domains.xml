@@ -126,8 +126,9 @@
             android:orientation="vertical">
 
             <LinearLayout
+                android:id="@+id/favourites"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <TextView
@@ -141,11 +142,62 @@
                     android:textSize="17sp" />
 
                 <LinearLayout
+                    android:id="@+id/fclickit"
                     android:layout_width="match_parent"
                     android:layout_height="60sp"
                     android:layout_marginLeft="15sp"
                     android:layout_marginRight="15sp"
                     android:layout_marginTop="15sp"
+                    android:background="@drawable/buttonshadow">
+
+                    <ImageView
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5sp"
+                        android:contentDescription="@string/icon"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/camera" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="?attr/selectableItemBackground"
+                            android:drawablePadding="20sp"
+                            android:paddingEnd="10sp"
+                            android:paddingStart="20sp"
+                            android:text="Click It"
+                            android:textAlignment="textStart" />
+
+                        <ImageView
+                            android:id="@+id/fclickitstar"
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="5sp"
+                            android:contentDescription="@string/icon"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/star" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/fbuildify"
+                    android:layout_width="match_parent"
+                    android:layout_height="60sp"
+                    android:layout_marginLeft="15sp"
+                    android:layout_marginRight="15sp"
+                    android:layout_marginTop="5sp"
                     android:background="@drawable/buttonshadow">
 
                     <ImageView
@@ -175,6 +227,7 @@
                             android:textAlignment="textStart" />
 
                         <ImageView
+                            android:id="@+id/fbuildifystar"
                             android:layout_width="30sp"
                             android:layout_height="30sp"
                             android:layout_gravity="center_vertical"
@@ -188,6 +241,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/fadbees"
                     android:layout_width="match_parent"
                     android:layout_height="60sp"
                     android:layout_marginLeft="15sp"
@@ -222,6 +276,7 @@
                             android:textAlignment="textStart" />
 
                         <ImageView
+                            android:id="@+id/fadbeesstar"
                             android:layout_width="30sp"
                             android:layout_height="30sp"
                             android:layout_gravity="center_vertical"
@@ -235,6 +290,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/fdigitomania"
                     android:layout_width="match_parent"
                     android:layout_height="60sp"
                     android:layout_marginLeft="15sp"
@@ -269,6 +325,7 @@
                             android:textAlignment="textStart" />
 
                         <ImageView
+                            android:id="@+id/fdigitomaniastar"
                             android:layout_width="30sp"
                             android:layout_height="30sp"
                             android:layout_gravity="center_vertical"
@@ -282,6 +339,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/fsourcecode"
                     android:layout_width="match_parent"
                     android:layout_height="60sp"
                     android:layout_marginLeft="15sp"
@@ -316,6 +374,7 @@
                             android:textAlignment="textStart" />
 
                         <ImageView
+                            android:id="@+id/fsourcecodestar"
                             android:layout_width="30sp"
                             android:layout_height="30sp"
                             android:layout_gravity="center_vertical"
@@ -346,6 +405,7 @@
                     android:textSize="17sp" />
 
                 <LinearLayout
+                    android:id="@+id/clickit"
                     android:layout_width="match_parent"
                     android:layout_height="60sp"
                     android:layout_marginLeft="15sp"
@@ -396,6 +456,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/buildify"
                     android:layout_width="match_parent"
                     android:layout_height="60sp"
                     android:layout_marginLeft="15sp"
@@ -445,6 +506,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/adbees"
                     android:layout_width="match_parent"
                     android:layout_height="60sp"
                     android:layout_marginLeft="15sp"
@@ -494,6 +556,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/digitomania"
                     android:layout_width="match_parent"
                     android:layout_height="60sp"
                     android:layout_marginLeft="15sp"
@@ -542,6 +605,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/sourcecode"
                     android:layout_width="match_parent"
                     android:layout_height="60sp"
                     android:layout_marginBottom="15sp"
