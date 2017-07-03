@@ -3,6 +3,7 @@
     package="innominatebit.aaruush17">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -10,19 +11,17 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <service
-            android:name=".Firebase.MyFirebaseMessagingService">
+        <service android:name=".Firebase.MyFirebaseMessagingService">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".Firebase.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
 
-        <service
-            android:name=".Firebase.MyFirebaseInstanceIDService">
-            <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
-            </intent-filter>
-        </service>
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
@@ -86,17 +85,14 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeNoBarWhite" />
         <activity
-            android:name=".NavigationDrawerElements.Team"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppThemeNoBarWhite" />
-        <activity
             android:name=".NavigationDrawerElements.MeetTheDevs"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeNoBarWhite" />
         <activity
             android:name=".NavigationDrawerElements.MeetTheDevTransition"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.Detail"/>
+            android:theme="@style/Theme.Detail" />
+        <activity android:name=".NavigationDrawerElements.Team"></activity>
     </application>
 
 </manifest>

@@ -1,149 +1,83 @@
 package innominatebit.aaruush17.NavigationDrawerElements;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
-import android.graphics.Typeface;
+import android.graphics.Bitmap;
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.GridView;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import innominatebit.aaruush17.Adapters.CustomGridViewAdapter;
 import innominatebit.aaruush17.Dashboard;
 import innominatebit.aaruush17.R;
 
-public class Team extends AppCompatActivity {
-
-    private Typeface logo;
-
-    private TextView header;
-
-    private Toolbar toolbar;
-
-    private GridView androidGridView;
-
-    private CustomGridViewAdapter cgrid;
-
-    String[] gridViewString = {
-
-            "Pranav", "Radhika", "Ranshu", "Poojith", "Pavan", "Nishanth", "Nishant", "Naveen",
-
-            "Manish", "Kaushal", "Kalaivani", "Haroon", "Gautham", "Dakhsita", "Ashrita", "Arjun",
-
-            "Aneek", "Amans", "Amank", "Abhiprae"
-
-    };
-
-    int[] gridViewImageId = {
-
-            R.drawable.pranav, R.drawable.radhika, R.drawable.ranshu,
-
-            R.drawable.poojith, R.drawable.pavan, R.drawable.nishanthk,
-
-            R.drawable.nishanth, R.drawable.naveen, R.drawable.manish, R.drawable.kaushal, R.drawable.kalaivani,
-
-            R.drawable.haroon, R.drawable.gautham, R.drawable.dakshita,
-
-            R.drawable.ashrita, R.drawable.arjun, R.drawable.aneek, R.drawable.amans, R.drawable.amank,
-
-            R.drawable.abhiprae
-
-    };
-
+public class Team extends AppCompatActivity implements View.OnClickListener
+{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        // Initializing Fonts
-
-        logo = Typeface.createFromAsset(getAssets(), "fonts/galada.ttf");
-
-
-        // Inflating View
-
         setContentView(R.layout.activity_team);
-
-
-        // Setting Up Grid View
-
-        gridSetup();
-
-
-        // Initializing Toolbar
-
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-
-        setSupportActionBar(toolbar);
-
-        getSupportActionBar().setTitle(null);
-
-
-        // Adding Back Button
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-
-        // Setting Up Header Text
-
-        header = (TextView) findViewById(R.id.headertext);
-
-
-        // Applying Aaruush Font
-
-        header.setTypeface(logo);
-
-
+        setTitle("Team Aaruush");
+        RelativeLayout data = (RelativeLayout) findViewById(R.id.data);
+        for(int i=0;i<data.getChildCount();i++)
+        {
+            View v = data.getChildAt(i);
+            v.setOnClickListener(this);
+        }
     }
-
-
-    private void gridSetup() {
-
-        cgrid = new CustomGridViewAdapter(Team.this, gridViewString, gridViewImageId);
-
-        androidGridView = (GridView) findViewById(R.id.grid);
-
-        androidGridView.setAdapter(cgrid);
-
-        androidGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int i, long id) {
-
-                Toast.makeText(Team.this, "Team: " + gridViewString[+i], Toast.LENGTH_LONG).show();
-
-            }
-
-        });
-
+    @Override
+    public void onClick(View view) {
+        LinearLayout linearLayout = (LinearLayout) view;
+        LinearLayout ll = (LinearLayout) linearLayout.getChildAt(0);
+        LinearLayout containsDP = (LinearLayout) ll.getChildAt(0);
+        ImageView dp = (ImageView)containsDP.getChildAt(0);
+        LinearLayout containsData = (LinearLayout) ll.getChildAt(1);
+        TextView name = (TextView)containsData.getChildAt(0);
+        TextView age = (TextView)containsData.getChildAt(1);
+        TextView proffesion = (TextView)containsData.getChildAt(2);
+        TextView collage = (TextView)containsData.getChildAt(3);
+        sendData(dp,name,age,proffesion,collage);
     }
-
-
+    private void sendData(ImageView dp, TextView name, TextView age, TextView profession,TextView college){
+        dp.buildDrawingCache();
+        Bitmap image = dp.getDrawingCache();
+        Intent intent = new Intent(Team.this, MeetTheDevTransition.class);
+        Bundle bundle = new Bundle();
+        bundle.putParcelable("imagebitmap", image);
+        bundle.putString("name", name.getText().toString());
+        bundle.putString("age", age.getText().toString());
+        bundle.putString("profession", profession.getText().toString());
+        bundle.putString("college", college.getText().toString());
+        bundle.putString("expertise", "");
+        bundle.putString("applied", "");
+        bundle.putString("aboutme", "");
+        bundle.putString("Activity","Team");
+        intent.putExtras(bundle);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(this, dp, getString(R.string.picturetransition));
+            startActivity(intent, options.toBundle());
+        }
+        else {
+            startActivity(intent);
+        }
+    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-
         switch (item.getItemId()) {
-
             case android.R.id.home:
-
                 Intent intent = new Intent(this, Dashboard.class);
-
                 startActivity(intent);
-
                 finish();
-
                 return true;
-
             default:
-
                 return super.onOptionsItemSelected(item);
-
         }
-
     }
-
-
 }

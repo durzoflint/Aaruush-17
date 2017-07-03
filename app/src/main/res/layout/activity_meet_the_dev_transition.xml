@@ -120,6 +120,7 @@
                                 android:background="@drawable/star" />
 
                             <TextView
+                                android:id="@+id/into"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -148,6 +149,7 @@
                                 android:weightSum="4">
 
                                 <TextView
+                                    android:id="@+id/age"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:layout_weight="1"
@@ -164,6 +166,7 @@
                                     android:background="#bdc3c7" />
 
                                 <TextView
+                                    android:id="@+id/profession"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:layout_weight="1"
@@ -180,6 +183,7 @@
                                     android:background="#bdc3c7" />
 
                                 <TextView
+                                    android:id="@+id/year"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:layout_weight="1"
@@ -196,6 +200,7 @@
                                     android:background="#bdc3c7" />
 
                                 <TextView
+                                    android:id="@+id/expertise"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:layout_weight="1"
@@ -296,7 +301,7 @@
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
-                    android:id="@+id/cardview"
+                    android:id="@+id/cardview2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_below="@+id/header"
@@ -310,7 +315,7 @@
                         android:layout_height="match_parent">
 
                         <LinearLayout
-                            android:id="@+id/introheader"
+                            android:id="@+id/introheader2"
                             android:layout_width="match_parent"
                             android:layout_height="50sp"
                             android:background="@color/colorPrimary">
@@ -339,7 +344,7 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/introheader"
+                            android:layout_below="@+id/introheader2"
                             android:orientation="horizontal"
                             android:weightSum="3">
 
