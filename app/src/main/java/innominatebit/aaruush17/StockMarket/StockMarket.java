@@ -26,10 +26,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 import innominatebit.aaruush17.R;
+import innominatebit.aaruush17.Storage.LocalStorage;
 
 public class StockMarket extends AppCompatActivity
 {
-    String emailID;
+    private String emailID;
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -40,11 +42,17 @@ public class StockMarket extends AppCompatActivity
     @Override
     protected void onStart(){
         super.onStart();
+
         new FetchStockData().execute();
+
         new MyData().execute("http://srmvdpauditorium.in/SRMStockMarket/getUserData.php?emailID="+emailID);
+
         doInteraction();
+
     }
-    void doInteraction(){
+
+
+    void doInteraction() {
         LinearLayout data=(LinearLayout)findViewById(R.id.data);
         for(int i=0;i<data.getChildCount();i++)
         {

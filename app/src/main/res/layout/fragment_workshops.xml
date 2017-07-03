@@ -1,6 +1,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
@@ -23,14 +24,46 @@
 
                 <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="match_parent">
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="5sp"
+                        android:layout_marginStart="5sp"
                         android:adjustViewBounds="true"
                         android:src="@drawable/engine" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Workshop 1"
+                            android:gravity="left"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:paddingStart="20sp"
+                            android:paddingBottom="10sp"
+                            android:paddingEnd="20sp"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="₹2500"
+                            android:gravity="right"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:paddingStart="20sp"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:paddingBottom="10sp"
+                            android:paddingEnd="20sp"
+                            />
+
+                    </FrameLayout>
 
                 </FrameLayout>
 
@@ -95,6 +128,39 @@
                         android:adjustViewBounds="true"
                         android:src="@drawable/brain" />
 
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Workshop 2"
+                            android:gravity="left"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:paddingStart="20sp"
+                            android:paddingBottom="10sp"
+                            android:paddingEnd="20sp"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="₹3600"
+                            android:gravity="right"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:paddingStart="20sp"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:paddingBottom="10sp"
+                            android:paddingEnd="20sp"
+                            />
+
+                    </FrameLayout>
+
+
                 </FrameLayout>
 
                 <FrameLayout
@@ -158,6 +224,39 @@
                         android:layout_marginLeft="5sp"
                         android:adjustViewBounds="true"
                         android:src="@drawable/print" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Workshop 3"
+                            android:gravity="left"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:paddingStart="20sp"
+                            android:paddingBottom="10sp"
+                            android:paddingEnd="20sp"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="₹5000"
+                            android:gravity="right"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:paddingStart="20sp"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:paddingBottom="10sp"
+                            android:paddingEnd="20sp"
+                            />
+
+                    </FrameLayout>
+
 
                 </FrameLayout>
 

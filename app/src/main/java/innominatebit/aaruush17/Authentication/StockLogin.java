@@ -2,61 +2,160 @@ package innominatebit.aaruush17.Authentication;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.HashMap;
 
 import innominatebit.aaruush17.R;
 import innominatebit.aaruush17.StockMarket.StockMarket;
+import innominatebit.aaruush17.Storage.LocalStorage;
 
-public class StockLogin extends AppCompatActivity
-{
+
+public class StockLogin extends AppCompatActivity {
+
+    private LocalStorage session;
+
+    private HashMap<String, String> profile;
+
+    private String method;
+
+    private String name;
+
+    private String firstname;
+
+    private String lastname;
+
+    private String email;
+
+    private Typeface logo;
+
+    private Toolbar toolbar;
+
+    private TextView header;
+
+    private TextView namefield;
+
+    private TextView emailfield;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_some);
 
-        //TODO Fetch user email id and name then assign here
-        final EditText name=(EditText)findViewById(R.id.name);
-        final EditText enteredEmailID=(EditText)findViewById(R.id.enteredemailid);
-        Button register=(Button)findViewById(R.id.register);
-        register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String userName=name.getText().toString();
-                String emailID=enteredEmailID.getText().toString();
-                if(userName.length()>0&&emailID.length()>0)
-                    new AddUser().execute(userName, emailID);
-                else
-                    Toast.makeText(StockLogin.this, "Invalid Data", Toast.LENGTH_SHORT).show();
-            }
-        });
+        // Initializing Fonts
+
+        logo = Typeface.createFromAsset(getAssets(), "fonts/galada.ttf");
+
+
+        // Initializing Toolbar
+
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+
+        setSupportActionBar(toolbar);
+
+        getSupportActionBar().setTitle(null);
+
+
+        // Adding Back Button
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
+        // Setting Up TextView
+
+        header = (TextView) findViewById(R.id.headertext);
+
+        namefield = (TextView) findViewById(R.id.name);
+
+        emailfield = (TextView) findViewById(R.id.email);
+
+
+        // Applying Aaruush Font
+
+        header.setTypeface(logo);
+
+
+        session = new LocalStorage(getApplicationContext());
+
+        profile = session.getProfileDetails();
+
+        method = profile.get(LocalStorage.METHOD);
+
+        checkLoginMethod();
+
         Button login=(Button)findViewById(R.id.login);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                EditText userID=(EditText)findViewById(R.id.loginmail);
-                String userEmailID=userID.getText().toString();
-                if(userEmailID.length()>0)
-                {
-                    Intent intent = new Intent(StockLogin.this, StockMarket.class);
-                    intent.putExtra("emailID", userEmailID);
-                    startActivity(intent);
-                }
-                else
-                    Toast.makeText(StockLogin.this, "Invalid Data", Toast.LENGTH_SHORT).show();
+
+                    Toast.makeText(StockLogin.this, "Coming Soon", Toast.LENGTH_SHORT).show();
+
             }
         });
+
     }
+
+
+    private void checkLoginMethod() {
+
+        if (method.contains("Facebook")) {
+
+            firstname = profile.get(LocalStorage.FIRSTNAME);
+
+            lastname = profile.get(LocalStorage.LASTNAME);
+
+            name = firstname + " " + lastname;
+
+            email = profile.get(LocalStorage.EMAIL);
+
+            namefield.setText(name);
+
+            emailfield.setText(email);
+
+            new AddUser().execute(name, email);
+
+            Toast.makeText(StockLogin.this, "NAME: " + name + "\n" + "EMAIL: " + email, Toast.LENGTH_LONG).show();
+
+        }
+
+        else if (method.contains("Google")) {
+
+            name = profile.get(LocalStorage.FIRSTNAME);
+
+            email = profile.get(LocalStorage.EMAIL);
+
+            namefield.setText(name);
+
+            emailfield.setText(email);
+
+            new AddUser().execute(name, email);
+
+            Toast.makeText(StockLogin.this, "NAME: " + name + "\n" + "EMAIL: " + email, Toast.LENGTH_LONG).show();
+
+        }
+
+        else {
+
+            Toast.makeText(StockLogin.this, "Error Login Credentials", Toast.LENGTH_LONG).show();
+
+        }
+
+    }
+
+
     private class AddUser extends AsyncTask<String,Void,Void>{
         String webPage="";
         ProgressDialog progressDialog;

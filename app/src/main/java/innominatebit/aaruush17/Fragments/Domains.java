@@ -64,7 +64,6 @@ public class Domains extends Fragment implements View.OnClickListener {
 
             for (i = 0; i<length; i++) {
 
-                Toast.makeText(getContext(), favourites.get(i), Toast.LENGTH_LONG).show();
 
             }
 
