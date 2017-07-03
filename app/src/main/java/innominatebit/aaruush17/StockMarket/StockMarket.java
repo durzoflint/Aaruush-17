@@ -7,6 +7,7 @@ import android.os.AsyncTask;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -31,7 +32,6 @@ import innominatebit.aaruush17.Storage.LocalStorage;
 public class StockMarket extends AppCompatActivity
 {
     private String emailID;
-
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -50,8 +50,6 @@ public class StockMarket extends AppCompatActivity
         doInteraction();
 
     }
-
-
     void doInteraction() {
         LinearLayout data=(LinearLayout)findViewById(R.id.data);
         for(int i=0;i<data.getChildCount();i++)
@@ -72,7 +70,7 @@ public class StockMarket extends AppCompatActivity
                     String buyMore="Buy More";
                     if(myShares==0.0)
                         buyMore="Buy";
-                    AlertDialog.Builder stockDialog = new AlertDialog.Builder(StockMarket.this)
+                    AlertDialog.Builder stockDialog = new AlertDialog.Builder(new ContextThemeWrapper(StockMarket.this, R.style.MyDialogTheme))
                             .setMessage("\nValue per Share : "+valuePerShare+"\nShares Owned by You: "+sharesOwned)
                             .setIcon(android.R.drawable.ic_menu_agenda).setTitle(name);
                     switch (myShares+"")
@@ -84,7 +82,8 @@ public class StockMarket extends AppCompatActivity
                                         {
                                             LayoutInflater inflater = LayoutInflater.from(StockMarket.this);
                                             final View stockDetails= inflater.inflate(R.layout.stock_details, null);
-                                            new AlertDialog.Builder(StockMarket.this).setTitle("Sell Stocks for "+name)
+                                            new AlertDialog.Builder(new ContextThemeWrapper(StockMarket.this, R.style.MyDialogTheme))
+                                                    .setTitle("Sell Stocks for "+name)
                                                     .setView(stockDetails)
                                                     .setMessage("\nValue per Share : "+valuePerShare
                                                             +"\nShares Owned by You: "+sharesOwned
@@ -125,7 +124,7 @@ public class StockMarket extends AppCompatActivity
                                 {
                                     LayoutInflater inflater = LayoutInflater.from(StockMarket.this);
                                     final View stockDetails= inflater.inflate(R.layout.stock_details, null);
-                                    new AlertDialog.Builder(StockMarket.this).setTitle("Buy Stocks for "+name)
+                                    new AlertDialog.Builder(new ContextThemeWrapper(StockMarket.this, R.style.MyDialogTheme)).setTitle("Buy Stocks for "+name)
                                             .setView(stockDetails)
                                             .setMessage("\nValue per Share : "+valuePerShare
                                                     +"\nShares Owned by You: "+sharesOwned

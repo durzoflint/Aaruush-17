@@ -115,7 +115,6 @@ public class MainLogin extends AppCompatActivity implements View.OnClickListener
 
         super.onCreate(savedInstanceState);
 
-
         // Initializing Fonts
 
         logo = Typeface.createFromAsset(getAssets(), "fonts/galada.ttf");

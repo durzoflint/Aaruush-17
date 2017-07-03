@@ -567,7 +567,7 @@
                                 android:layout_marginStart="15sp"
                                 android:layout_marginTop="5sp"
                                 android:fontFamily="sans-serif-smallcaps"
-                                android:text="19 Years Old"
+                                android:text="20 Years Old"
                                 android:textColor="#7f8c8d"
                                 android:textSize="15sp" />
 

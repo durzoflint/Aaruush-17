@@ -55,9 +55,11 @@
                     android:gravity="center">
 
                     <ImageView
-                        android:layout_width="200sp"
-                        android:layout_height="200sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_gravity="center"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"
                         android:src="@drawable/lenovo" />
 
                 </LinearLayout>
@@ -97,9 +99,11 @@
                     android:gravity="center">
 
                     <ImageView
-                        android:layout_width="100sp"
-                        android:layout_height="100sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_gravity="center"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"
                         android:src="@drawable/hp" />
 
                 </LinearLayout>
@@ -140,9 +144,11 @@
                     android:gravity="center">
 
                     <ImageView
-                        android:layout_width="150sp"
-                        android:layout_height="150sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_gravity="center"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"
                         android:src="@drawable/cisco" />
 
                 </LinearLayout>
@@ -183,9 +189,12 @@
                     android:gravity="center">
 
                     <ImageView
-                        android:layout_width="175sp"
-                        android:layout_height="175sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_gravity="center"
+                        android:paddingEnd="20dp"
+                        android:paddingStart="20dp"
+                        android:paddingTop="20dp"
                         android:src="@drawable/wittyfeed" />
 
                 </LinearLayout>

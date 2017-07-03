@@ -6,9 +6,8 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <service
@@ -62,10 +61,6 @@
             android:name=".StockMarket.LeaderboardActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
-        <activity
-            android:name=".Authentication.StockLogin"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppThemeNoBarWhite" />
         <activity
             android:name=".Dashboard"
             android:screenOrientation="portrait"
