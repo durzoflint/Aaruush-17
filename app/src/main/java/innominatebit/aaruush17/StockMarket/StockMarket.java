@@ -38,6 +38,8 @@ public class StockMarket extends AppCompatActivity
         setContentView(R.layout.activity_stock_market);
         Bundle bundle = getIntent().getExtras();
         emailID = bundle.getString("emailID");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setTitle("SRM Stock Market");
     }
     @Override
     protected void onStart(){
@@ -308,6 +310,8 @@ public class StockMarket extends AppCompatActivity
     }
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
+        if(id == android.R.id.home)
+            onBackPressed();
         if (id == R.id.leaderboard) {
             Intent intent = new Intent(StockMarket.this, LeaderboardActivity.class);
             intent.putExtra("emailID", emailID);

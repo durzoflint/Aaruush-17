@@ -66,11 +66,7 @@ public class Sponsors extends AppCompatActivity {
 
             case android.R.id.home:
 
-                Intent intent = new Intent(this, Dashboard.class);
-
-                startActivity(intent);
-
-                finish();
+                onBackPressed();
 
                 return true;
 
