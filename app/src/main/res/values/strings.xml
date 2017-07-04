@@ -30,6 +30,12 @@
     <string name="developers">Meet The Devs</string>
     <string name="logout">Logout</string>
 
+    <string name="clickit">Click It</string>
+    <string name="buildify">Buildify</string>
+    <string name="adbees">Ad-Bees</string>
+    <string name="digitomania">Digito Mania</string>
+    <string name="sourcecode">Source Code 2.0</string>
+
     <string name="com.twitter.sdk.android.CONSUMER_KEY">1oh5jqgVbxotvSCWBMvt94xWb</string>
     <string name="com.twitter.sdk.android.CONSUMER_SECRET">lnpjToXr58y2xOD3q4ZUpoMqFhGTJ1b43RcQMOvlLq1sQ1u6Pm</string>
 

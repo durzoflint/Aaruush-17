@@ -92,7 +92,12 @@
             android:name=".NavigationDrawerElements.MeetTheDevTransition"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.Detail" />
-        <activity android:name=".NavigationDrawerElements.Team"></activity>
+        <activity android:name=".NavigationDrawerElements.Team" />
+        <activity android:name=".Domains.ClickIt" />
+        <activity android:name=".Domains.Buildify" />
+        <activity android:name=".Domains.AdBees" />
+        <activity android:name=".Domains.DigitoMania" />
+        <activity android:name=".Domains.SourceCode"></activity>
     </application>
 
 </manifest>
