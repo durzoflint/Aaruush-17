@@ -5,115 +5,6 @@
     android:orientation="vertical"
     tools:context="innominatebit.aaruush17.Fragments.Timeline">
 
-    <!--<LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="100sp"
-        android:background="@color/secondary"
-        android:orientation="vertical"
-        android:weightSum="1">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="0.4"
-            android:orientation="horizontal"
-            android:weightSum="1">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0.5"
-                android:gravity="right">
-
-                <LinearLayout
-                    android:layout_width="130sp"
-                    android:layout_height="30sp"
-                    android:layout_gravity="bottom"
-                    android:layout_marginBottom="5sp"
-                    android:layout_marginEnd="5sp"
-                    android:layout_marginRight="5sp"
-                    android:background="@drawable/roundbutton">
-
-                    <ImageView
-                        android:layout_width="20sp"
-                        android:layout_height="20sp"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginStart="10sp"
-                        android:contentDescription="@string/icon"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/calendar" />
-
-                    <Button
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="?attr/selectableItemBackgroundBorderless"
-                        android:fontFamily="sans-serif-smallcaps"
-                        android:text="Day/Time"
-                        android:textColor="@color/white" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0.5"
-                android:gravity="left">
-
-                <LinearLayout
-                    android:layout_width="130sp"
-                    android:layout_height="30sp"
-                    android:layout_gravity="bottom"
-                    android:layout_marginBottom="5sp"
-                    android:layout_marginLeft="5sp"
-                    android:layout_marginStart="5sp"
-                    android:background="@drawable/roundbutton">
-
-                    <ImageView
-                        android:layout_width="20sp"
-                        android:layout_height="20sp"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginStart="5sp"
-                        android:contentDescription="@string/icon"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/database" />
-
-                    <Button
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="?attr/selectableItemBackgroundBorderless"
-                        android:fontFamily="sans-serif-smallcaps"
-                        android:text="Alphabetical"
-                        android:textColor="@color/white" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="0.6"
-            android:gravity="center">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:fontFamily="sans-serif-smallcaps"
-                android:text="EVENTS CONDUCTED: 34/349"
-                android:textColor="@color/white"
-                android:textSize="16sp" />
-
-        </LinearLayout>
-
-    </LinearLayout>-->
-
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -122,7 +13,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <LinearLayout

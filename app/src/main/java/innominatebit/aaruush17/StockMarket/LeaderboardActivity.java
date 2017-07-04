@@ -7,6 +7,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.MenuItem;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import java.io.BufferedReader;
@@ -27,6 +28,17 @@ public class LeaderboardActivity extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         String emailID = bundle.getString("emailID");
         new LoadLeaderboard().execute(emailID);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setTitle("Leaderboard");
+    }
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
     private class LoadLeaderboard extends AsyncTask<String,Void,Void>{
         ArrayList<String> ranks;
