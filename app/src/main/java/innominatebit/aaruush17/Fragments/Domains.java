@@ -1,5 +1,6 @@
 package innominatebit.aaruush17.Fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -11,6 +12,11 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import innominatebit.aaruush17.Domains.AdBees;
+import innominatebit.aaruush17.Domains.Buildify;
+import innominatebit.aaruush17.Domains.ClickIt;
+import innominatebit.aaruush17.Domains.DigitoMania;
+import innominatebit.aaruush17.Domains.SourceCode;
 import innominatebit.aaruush17.R;
 import innominatebit.aaruush17.Storage.TinyDB;
 
@@ -134,8 +140,6 @@ public class Domains extends Fragment implements View.OnClickListener {
             db.putListString("Favourites", favourites);
 
             favouritesarea.setVisibility(View.GONE);
-
-            Toast.makeText(getContext(), "Empty", Toast.LENGTH_LONG).show();
 
         } else {
 
@@ -462,6 +466,37 @@ public class Domains extends Fragment implements View.OnClickListener {
 
             Toast.makeText(getContext(), "Source Code 2.0 Removed From Favourites!", Toast.LENGTH_LONG).show();
 
+        } else if (view == clickit) {
+
+            Intent go = new Intent(getContext(), ClickIt.class);
+
+            startActivity(go);
+
+        } else if (view == buildify) {
+
+            Intent go = new Intent(getContext(), Buildify.class);
+
+            startActivity(go);
+
+
+        } else if (view == adbees) {
+
+            Intent go = new Intent(getContext(), AdBees.class);
+
+            startActivity(go);
+
+
+        } else if (view == digitomania) {
+
+            Intent go = new Intent(getContext(), DigitoMania.class);
+
+            startActivity(go);
+
+        } else if (view == sourcecode) {
+
+            Intent go = new Intent(getContext(), SourceCode.class);
+
+            startActivity(go);
         }
 
     }
